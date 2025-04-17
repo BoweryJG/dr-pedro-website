@@ -516,11 +516,33 @@ header nav ul li a:hover {
 /* Chatbot luxury widget */
 .chatbot-widget {
     position: fixed;
+    bottom: 110px; /* moved up so it doesn't overlap Book Now */
+    right: 36px;
+    z-index: 10010;
+    font-family: var(--body-font);
+    pointer-events: auto;
+}
+
+/* Book Now button assumed class */
+.book-now-btn, .floating-cta {
+    position: fixed;
     bottom: 30px;
     right: 30px;
-    z-index: 9999;
-    font-family: var(--body-font);
+    z-index: 10020;
+    /* Existing styles remain */
 }
+
+@media (max-width: 600px) {
+    .chatbot-widget {
+        bottom: 130px;
+        right: 10px;
+    }
+    .book-now-btn, .floating-cta {
+        bottom: 20px;
+        right: 10px;
+    }
+}
+
 .chatbot-toggle {
     background: linear-gradient(120deg,#004080 60%,#d4af37 100%);
     color: #fff;
