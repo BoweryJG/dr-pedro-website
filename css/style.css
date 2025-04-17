@@ -1,35 +1,51 @@
 /* General Styles */
 :root {
-    --primary-color: #004080; /* Deep Blue */
-    --secondary-color: #D4AF37; /* Gold */
-    --accent-color: #f0f0f0; /* Light Gray */
-    --cta-gradient: linear-gradient(90deg, #004080 0%, #D4AF37 100%);
-    --text-color: #333;
+    --green-1: #e6f2e7; /* lightest */
+    --green-2: #97c8a5;
+    --green-3: #5d9287;
+    --green-4: #345c60;
+    --green-5: #27373e; /* darkest */
+    --pop: #ffd700; /* gold pop, can swap to #ff6f4d for coral */
+    --primary-bg: #e6f2e7;
+    --section-bg: #fff;
+    --card-bg: #fff;
+    --accent: var(--pop);
+    --primary-text: #27373e;
+    --secondary-text: #345c60;
+    --nav-bg: #f8faf8cc;
+    --nav-glass: rgba(230,242,231,0.7);
     --heading-font: 'Poppins', sans-serif;
     --body-font: 'Poppins', sans-serif;
 }
 
+
 body {
+    background: var(--primary-bg);
+    color: var(--primary-text);
     font-family: var(--body-font);
     margin: 0;
+    padding: 0;
+    letter-spacing: 0.01em;
     line-height: 1.6;
-    color: var(--text-color);
-    background-color: #fff;
     overflow-x: hidden; /* Prevent horizontal scroll */
 }
+
 
 .container {
     max-width: 1200px;
     margin: 0 auto;
-    padding: 20px;
+    padding: 40px 24px 40px 24px;
+    background: var(--section-bg);
 }
 
 h1, h2, h3 {
     font-family: var(--heading-font);
-    color: var(--primary-color);
+    color: var(--green-5);
     margin-bottom: 15px;
     line-height: 1.2;
+    letter-spacing: -0.5px;
 }
+
 
 h1 {
     font-size: 3.5rem;
@@ -125,6 +141,11 @@ a:hover {
 
 /* Header */
 .glass-nav {
+    background: var(--nav-glass);
+    backdrop-filter: blur(14px) saturate(1.2);
+    border-bottom: 2px solid var(--green-2);
+    box-shadow: 0 2px 16px #5d928733;
+}
     background: rgba(255,255,255,0.5);
     backdrop-filter: blur(12px) saturate(1.3);
     box-shadow: 0 8px 32px rgba(0,0,0,0.10);
@@ -492,6 +513,17 @@ header nav ul li a:hover {
     margin: 36px 0 48px 0;
 }
 .blog-card {
+    background: var(--card-bg);
+    border-radius: 18px;
+    box-shadow: 0 4px 18px var(--green-3, #5d9287, 0.13);
+    border: 2.5px solid var(--accent);
+    padding: 32px 28px;
+    transition: box-shadow 0.2s, border-color 0.2s;
+}
+.blog-card:hover {
+    box-shadow: 0 8px 32px var(--accent, #ffd70055);
+    border-color: var(--pop);
+}
     background: #fff;
     border-radius: 18px;
     box-shadow: 0 4px 18px #00336622;
@@ -739,6 +771,33 @@ header nav ul li a:hover {
 }
 
 #services .luxury-card {
+    background: var(--card-bg);
+    border-radius: 22px;
+    box-shadow: 0 6px 32px var(--green-3, #5d9287, 0.11);
+    border: 2.5px solid var(--accent);
+    padding: 46px 34px 38px 34px;
+    flex: 1 1 0;
+    text-align: center;
+    transition: box-shadow 0.25s, transform 0.22s, border-color 0.22s;
+    margin-bottom: 10px;
+    position: relative;
+    overflow: hidden;
+}
+.luxury-card:hover {
+    box-shadow: 0 16px 48px var(--accent, #ffd70044), 0 2px 16px var(--green-3, #5d9287, 0.11);
+    transform: translateY(-8px) scale(1.025);
+    border-color: var(--pop);
+}
+.luxury-icon {
+    height: 62px;
+    margin-bottom: 22px;
+    filter: drop-shadow(0 2px 10px var(--accent, #ffd70055));
+    transition: filter 0.25s, transform 0.22s;
+}
+.luxury-card:hover .luxury-icon {
+    filter: drop-shadow(0 4px 16px var(--accent, #ffd700cc));
+    transform: scale(1.09) rotate(-2deg);
+}
     background: #fff;
     border-radius: 22px;
     box-shadow: 0 6px 32px rgba(0,64,128,0.11);
