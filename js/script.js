@@ -1,4 +1,15 @@
 $(document).ready(function(){
+    // Luxury section reveal animation
+    const revealSections = document.querySelectorAll('.section-reveal');
+    const revealObserver = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('visible');
+                observer.unobserve(entry.target);
+            }
+        });
+    }, { threshold: 0.18 });
+    revealSections.forEach(sec => revealObserver.observe(sec));
     // Register GSAP ScrollTrigger plugin
     gsap.registerPlugin(ScrollTrigger);
 
