@@ -36,16 +36,26 @@
         </div>
     </header>
 
-    <section id="hero">
-        <div class="hero-image">
-            <img src="img/hero-image.jpg" alt="Dr. Greg Pedro smiling" loading="lazy">
-        </div>
-        <div class="hero-content">
-            <h1>Transform Your Smile and Confidence</h1>
-            <p class="subtitle">Expert Dental Implants, TMJ Treatment, and Emface by BTL in Staten Island.</p>
-            <a href="#contact" class="button primary">Book a Consultation</a>
+    <section id="hero" class="award-hero">
+        <div class="hero-bg-overlay"></div>
+        <div class="container hero-flex">
+            <div class="hero-content">
+                <h1><span class="highlight">Award-Winning</span> Dental Care<br>Transforming Smiles in Staten Island</h1>
+                <p class="subtitle">Experience the future of dentistry with Dr. Greg Pedro—specialist in Implants, TMJ & Emface by BTL.</p>
+                <a href="#contact" class="button mega-cta">Claim Your Free Consultation</a>
+                <div class="hero-ctas">
+                    <a href="#services" class="button secondary">See Our Services</a>
+                    <a href="#testimonials" class="button secondary">Patient Stories</a>
+                </div>
+            </div>
+            <div class="hero-image">
+                <img src="img/hero-image.jpg" alt="Dr. Greg Pedro smiling" loading="lazy">
+            </div>
         </div>
     </section>
+
+    <!-- Floating CTA -->
+    <a href="#contact" class="floating-cta">Book Now</a>
 
     <section id="about">
         <div class="container">
@@ -53,37 +63,37 @@
                 <img src="img/dr-pedro-about.jpg" alt="Dr. Greg Pedro in office" loading="lazy">
             </div>
             <div class="about-content">
-                <h2>About Dr. Greg Pedro</h2>
-                <p>Dr. Greg Pedro is a leading dental specialist in Staten Island, dedicated to providing exceptional care and transformative results. With expertise in dental implants, TMJ treatment, and cutting-edge procedures like Emface by BTL, Dr. Pedro is committed to helping you achieve a healthy, beautiful smile and improved well-being.</p>
-                <p>Driven by a passion for innovation and patient satisfaction, Dr. Pedro stays at the forefront of dental advancements, ensuring you receive the most advanced and effective treatments available.</p>
+                <h2>Meet Dr. Greg Pedro</h2>
+                <p>Staten Island’s trusted dental innovator. Dr. Pedro combines advanced technology, artistry, and compassionate care to deliver life-changing results. Discover why patients call his practice <span class="highlight">the best in NYC</span>.</p>
+                <a href="#testimonials" class="button primary">Why Patients Love Us</a>
             </div>
         </div>
     </section>
 
     <section id="services">
         <div class="container">
-            <h2>Our Services</h2>
+            <h2>Our Signature Services</h2>
             <div class="services-grid">
 
                 <div class="service-card">
                     <img src="img/dental-implant-icon.png" alt="Dental Implants" loading="lazy">
                     <h3>Dental Implants</h3>
-                    <p>Replace missing teeth with durable, natural-looking dental implants. Restore your smile and confidence with our expert implant services.</p>
-                    <a href="#contact" class="button secondary">Learn More</a>
+                    <p>Restore missing teeth with <span class="highlight">NYC’s most advanced dental implants</span>. Experience a confident, natural smile.</p>
+                    <a href="#contact" class="button secondary">Get My Smile Back</a>
                 </div>
 
-                 <div class="service-card">
+                <div class="service-card">
                     <img src="img/emface-icon.png" alt="Emface by BTL" loading="lazy">
                     <h3>Emface by BTL</h3>
-                    <p>The revolutionary non-invasive treatment to lift your face and reduce wrinkles without needles.  Look younger and refreshed with Emface.</p>
-                    <a href="#contact" class="button secondary">Discover Emface</a>
+                    <p>Lift, smooth, and rejuvenate—<span class="highlight">no needles, no downtime</span>. Discover the future of facial aesthetics.</p>
+                    <a href="#contact" class="button secondary">Try Emface Now</a>
                 </div>
 
                 <div class="service-card">
                     <img src="img/tmj-icon.png" alt="TMJ Treatment" loading="lazy">
                     <h3>TMJ Treatment</h3>
-                    <p>Find relief from TMJ pain and discomfort with our comprehensive TMJ treatment options.  Improve your quality of life with our specialized care.</p>
-                    <a href="#contact" class="button secondary">Explore TMJ Treatment</a>
+                    <p>Say goodbye to jaw pain and headaches. Our <span class="highlight">specialized TMJ care</span> brings lasting relief and comfort.</p>
+                    <a href="#contact" class="button secondary">End My Pain</a>
                 </div>
 
             </div>
@@ -96,8 +106,9 @@
                 <img src="img/yomi-robot.png" alt="Yomi Robotic Dental Surgery" loading="lazy">
             </div>
             <div class="yomi-content">
-                <h2>Precision Dental Implants with Yomi</h2>
-                <p>Dr. Pedro is proud to offer Yomi® Robotic-Assisted Dental Surgery, bringing unparalleled precision and accuracy to dental implant procedures.  Yomi allows for minimally invasive implant placement, leading to faster healing and improved outcomes.</p>
+                <h2>NYC’s Only Yomi® Robotic Dental Surgery</h2>
+                <p>Experience <span class="highlight">unmatched precision</span> and faster healing with Yomi® Robotic-Assisted Implants—exclusive to Dr. Pedro’s practice.</p>
+                <a href="#contact" class="button primary">Book Your Yomi Consultation</a>
                 <p>Experience the future of dental implants with Yomi – only at Dr. Greg Pedro's office in Staten Island.</p>
                 <a href="#contact" class="button primary">Learn About Yomi</a>
             </div>
@@ -106,7 +117,7 @@
 
      <section id="emface">
         <div class="container">
-            <h2>Emface by BTL:  The Future of Facial Rejuvenation</h2>
+            <h2>Emface by BTL: The Future of Facial Rejuvenation</h2>
             <div class="emface-grid">
                  <div class="emface-card">
                     <img src="img/emface-before-after.jpg" alt="Emface Before and After" loading="lazy">
@@ -210,6 +221,48 @@
     </footer>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
+    <!-- Testimonials Slider -->
+    <section id="testimonials">
+        <div class="container">
+            <h2>What Our Patients Say</h2>
+            <div class="testimonial-slider">
+                <div class="testimonial">
+                    <p>“Dr. Pedro changed my life! The implant process was painless and the results are stunning.”</p>
+                    <span>- Maria G.</span>
+                </div>
+                <div class="testimonial">
+                    <p>“The Emface treatment took years off my face. I feel so much more confident!”</p>
+                    <span>- John D.</span>
+                </div>
+                <div class="testimonial">
+                    <p>“After years of TMJ pain, I finally have relief. Thank you, Dr. Pedro!”</p>
+                    <span>- Lisa S.</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Before & After Gallery -->
+    <section id="gallery">
+        <div class="container">
+            <h2>Before & After Transformations</h2>
+            <div class="gallery-grid">
+                <div class="gallery-item">
+                    <img src="img/before1.jpg" alt="Before dental treatment">
+                    <img src="img/after1.jpg" alt="After dental treatment">
+                </div>
+                <div class="gallery-item">
+                    <img src="img/before2.jpg" alt="Before facial rejuvenation">
+                    <img src="img/after2.jpg" alt="After facial rejuvenation">
+                </div>
+                <div class="gallery-item">
+                    <img src="img/before3.jpg" alt="Before TMJ treatment">
+                    <img src="img/after3.jpg" alt="After TMJ treatment">
+                </div>
+            </div>
+        </div>
+    </section>
+
     <script src="js/script.js"></script>
 </body>
 </html>
