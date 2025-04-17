@@ -1,4 +1,7 @@
 $(document).ready(function(){
+    // Register GSAP ScrollTrigger plugin
+    gsap.registerPlugin(ScrollTrigger);
+
     // Smooth Scrolling
     $('a[href^="#"]').on('click', function(event) {
         var target = $(this.getAttribute('href'));
@@ -41,5 +44,41 @@ $(document).ready(function(){
         adaptiveHeight: true,
         autoplay: true,
         autoplaySpeed: 5000,
+    });
+
+    // Hide header on scroll down, show on scroll up
+    let lastScroll = 0;
+    ScrollTrigger.create({
+        onUpdate: self => {
+            const cur = self.scroll();
+            if (cur > lastScroll && cur > 100) {
+                gsap.to('header', {y: '-100%', duration: 0.3, ease: 'power1.out'});
+            } else {
+                gsap.to('header', {y: '0%', duration: 0.3, ease: 'power1.out'});
+            }
+            lastScroll = cur;
+        }
+    });
+
+    // Reveal sections on scroll
+    gsap.utils.toArray('section').forEach(sec => {
+        if (sec.id && sec.id !== 'hero') {
+            gsap.from(sec, {
+                opacity: 0,
+                y: 50,
+                duration: 1,
+                scrollTrigger: {trigger: sec, start: 'top 80%'},
+            });
+        }
+    });
+
+    // Initialize gallery slider
+    $('.gallery-grid').slick({
+        dots: true,
+        infinite: true,
+        speed: 600,
+        slidesToShow: 1,
+        arrows: true,
+        adaptiveHeight: true,
     });
 });
