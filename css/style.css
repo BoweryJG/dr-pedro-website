@@ -156,6 +156,37 @@ a:hover {
     color: var(--secondary-color);
 }
 
+.classy-logo {
+    display: flex;
+    align-items: center;
+    padding: 0 6px;
+}
+.logo-bg {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(255,255,255,0.75);
+    border-radius: 50%;
+    border: 3.5px solid #d4af37;
+    box-shadow: 0 4px 24px #d4af3733, 0 1.5px 8px #00336622;
+    padding: 8px;
+    width: 130px;
+    height: 130px;
+    transition: box-shadow 0.2s, border-color 0.22s;
+    position: relative;
+}
+.logo-bg img {
+    width: 110px;
+    height: 110px;
+    border-radius: 50%;
+    object-fit: cover;
+    background: #fff;
+    box-shadow: 0 2px 12px #d4af3755;
+}
+.logo-bg:hover {
+    box-shadow: 0 8px 32px #d4af3766, 0 2px 12px #00336633;
+    border-color: #ffd700;
+}
 .gold-glow img {
     filter: drop-shadow(0 0 8px #d4af37aa) drop-shadow(0 0 16px #d4af3755);
     animation: goldPulse 2.5s infinite alternate;
