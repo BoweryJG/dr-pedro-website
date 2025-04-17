@@ -38,6 +38,7 @@
                     <li><a href="#emface">Emface</a></li>
                     <li><a href="#tmj">TMJ</a></li>
                     <li><a href="#contact">Contact</a></li>
+                    <li><a href="blog.html">Blog</a></li>
                 </ul>
             </nav>
             <button class="hamburger">
@@ -288,5 +289,20 @@
     </section>
 
     <script src="js/script.js"></script>
+    <!-- Chatbot Widget -->
+    <div id="chatbot-widget" class="chatbot-widget">
+        <button id="chatbot-toggle" class="chatbot-toggle" aria-label="Open chat">
+            <span>💬</span>
+        </button>
+        <div id="chatbot-window" class="chatbot-window">
+            <div class="chatbot-header">Ask Dr. Pedro's AI Assistant <button id="chatbot-close">×</button></div>
+            <div class="chatbot-messages" id="chatbot-messages"></div>
+            <form id="chatbot-form" class="chatbot-form">
+                <input type="text" id="chatbot-input" placeholder="Type your question..." autocomplete="off" required />
+                <button type="submit">Send</button>
+            </form>
+        </div>
+    </div>
+    <script src="js/chatbot.js"></script>
 </body>
 </html>
