@@ -238,11 +238,14 @@ a:hover {
     .brand-tagline { display: none; }
 }
 
+.glass-nav {
     background: var(--nav-glass);
     backdrop-filter: blur(14px) saturate(1.2);
     border-bottom: 2px solid var(--green-2);
     box-shadow: 0 2px 16px #5d928733;
 }
+
+.glass-nav-alt {
     background: rgba(255,255,255,0.5);
     backdrop-filter: blur(12px) saturate(1.3);
     box-shadow: 0 8px 32px rgba(0,0,0,0.10);
@@ -539,9 +542,27 @@ a:hover {
   font-weight: 600;
 }
 .luxury-tmj-image img {
-  border-radius: 22px;
-  box-shadow: 0 8px 32px #0a254022, 0 2px 12px #d4af3722;
+  border-radius: 32px !important;
+  box-shadow: 0 8px 32px #3ed6c120, 0 2px 12px #ffe9b055;
   max-width: 340px;
+  transition: border-radius 0.25s;
+}
+
+.tmj-image, .luxury-tmj-image, .tmj-image img, .luxury-tmj-image img {
+  border-radius: 32px !important;
+  overflow: hidden;
+}
+
+/* General image softening for all major cards */
+.luxury-card, .service-card, .blog-card, .about-image img, .yomi-image img, .emface-card img {
+  border-radius: 24px !important;
+  overflow: hidden;
+}
+
+/* Remove any accidental hard edge overrides */
+.tmj-remove, .all, .hard, .edgeds, .image {
+  border-radius: 32px !important;
+  overflow: hidden !important;
 }
 @media (max-width: 900px) {
   .luxury-tmj .container.tmj-flex {
@@ -914,10 +935,6 @@ header nav ul li a:hover {
     transform: none;
 }
 
-    opacity: 0;
-    transform: translateY(40px);
-    transition: opacity 0.7s cubic-bezier(.61,.01,.49,1.03), transform 0.7s cubic-bezier(.61,.01,.49,1.03);
-}
 .section-reveal.visible {
     opacity: 1;
     transform: none;
@@ -978,13 +995,6 @@ header nav ul li a:hover {
 .blog-card:hover {
     box-shadow: 0 8px 32px var(--accent, #ffd70055);
     border-color: var(--pop);
-}
-    background: #fff;
-    border-radius: 18px;
-    box-shadow: 0 4px 18px #00336622;
-    border: 2.5px solid #d4af37;
-    padding: 32px 28px;
-    transition: box-shadow 0.2s, border-color 0.2s;
 }
 .blog-card:hover {
     box-shadow: 0 8px 32px #d4af3755;
@@ -1288,18 +1298,7 @@ header nav ul li a:hover {
     filter: drop-shadow(0 4px 16px var(--accent, #ffd700cc));
     transform: scale(1.09) rotate(-2deg);
 }
-    background: #fff;
-    border-radius: 22px;
-    box-shadow: 0 6px 32px rgba(0,64,128,0.11);
-    border: 2.5px solid #d4af37;
-    padding: 46px 34px 38px 34px;
-    flex: 1 1 0;
-    text-align: center;
-    transition: box-shadow 0.25s, transform 0.22s, border-color 0.22s;
-    margin-bottom: 10px;
-    position: relative;
-    overflow: hidden;
-}
+
 .luxury-card:hover {
     box-shadow: 0 16px 48px rgba(212,175,55,0.14), 0 2px 16px rgba(0,64,128,0.11);
     transform: translateY(-8px) scale(1.025);
