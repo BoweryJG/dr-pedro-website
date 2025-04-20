@@ -120,7 +120,6 @@ a:hover {
     color: var(--secondary-color);
 }
 
-/* Buttons */
 .button {
     display: inline-block;
     padding: 14px 36px;
@@ -175,7 +174,6 @@ a:hover {
     text-shadow: 0 2px 8px rgba(0,0,0,0.10);
 }
 
-/* Header */
 .glass-nav, .luxury-nav {
     background: var(--nav-glass);
     backdrop-filter: blur(24px) saturate(1.8);
@@ -206,9 +204,11 @@ a:hover {
     padding: 8px 22px 8px 8px;
     transition: box-shadow 0.18s;
 }
+
 .luxury-logo:hover {
     box-shadow: 0 6px 32px #d4af3755;
 }
+
 .brand-title {
     font-family: var(--heading-font);
     font-size: 2.3rem;
@@ -223,6 +223,7 @@ a:hover {
     -webkit-text-fill-color: transparent;
     text-shadow: 0 2px 18px #d4af3744;
 }
+
 .brand-tagline {
     font-size: 1.09rem;
     color: var(--accent);
@@ -232,6 +233,7 @@ a:hover {
     font-family: var(--body-font);
     opacity: 0.76;
 }
+
 .nav-list {
     display: flex;
     align-items: center;
@@ -240,6 +242,7 @@ a:hover {
     margin: 0;
     padding: 0;
 }
+
 .nav-list li a {
     font-size: 1.13rem;
     font-weight: 700;
@@ -251,10 +254,12 @@ a:hover {
     border-radius: 6px;
     background: none;
 }
+
 .nav-list li a:hover, .nav-list li a:focus {
     color: var(--accent);
     background: rgba(212,175,55,0.08);
 }
+
 .nav-list li a.nav-cta {
     background: var(--gold-gradient);
     color: var(--primary);
@@ -266,16 +271,13 @@ a:hover {
     border: 2px solid var(--accent);
     transition: background 0.18s, color 0.18s, box-shadow 0.18s;
 }
+
 .nav-list li a.nav-cta:hover {
     background: linear-gradient(90deg, #fffbe6 0%, #d4af37 100%);
     color: #bfa14b;
     box-shadow: 0 4px 22px #d4af3733;
 }
-.nav-list li a.nav-cta:hover {
-    background: linear-gradient(90deg, #fffbe6 0%, #d4af37 100%);
-    color: #bfa14b;
-    box-shadow: 0 4px 16px #d4af3733;
-}
+
 .luxury-hamburger {
     background: none;
     border: none;
@@ -285,6 +287,7 @@ a:hover {
     cursor: pointer;
     margin-left: 18px;
 }
+
 .luxury-hamburger span {
     display: block;
     width: 30px;
@@ -293,6 +296,7 @@ a:hover {
     border-radius: 2px;
     transition: all 0.18s;
 }
+
 .luxury-hamburger span {
     display: block;
     width: 28px;
@@ -301,6 +305,7 @@ a:hover {
     border-radius: 2px;
     transition: all 0.18s;
 }
+
 @media (max-width: 900px) {
     .nav-list { gap: 16px; }
     .brand-title { font-size: 1.2rem; }
@@ -328,6 +333,7 @@ a:hover {
     position: relative;
     transition: color 0.3s;
 }
+
 .glass-nav nav ul li a::after {
     content: '';
     display: block;
@@ -339,9 +345,11 @@ a:hover {
     position: absolute;
     left: 0; bottom: -6px;
 }
+
 .glass-nav nav ul li a:hover::after {
     width: 100%;
 }
+
 .glass-nav nav ul li a:hover {
     color: var(--secondary-color);
 }
@@ -351,6 +359,7 @@ a:hover {
     align-items: center;
     padding: 0 6px;
 }
+
 .logo-bg {
     display: inline-flex;
     align-items: center;
@@ -365,6 +374,7 @@ a:hover {
     transition: box-shadow 0.2s, border-color 0.22s;
     position: relative;
 }
+
 .logo-bg img {
     width: 110px;
     height: 110px;
@@ -373,14 +383,17 @@ a:hover {
     background: #fff;
     box-shadow: 0 2px 12px #d4af3755;
 }
+
 .logo-bg:hover {
     box-shadow: 0 8px 32px #d4af3766, 0 2px 12px #00336633;
     border-color: #ffd700;
 }
+
 .gold-glow img {
     filter: drop-shadow(0 0 8px #d4af37aa) drop-shadow(0 0 16px #d4af3755);
     animation: goldPulse 2.5s infinite alternate;
 }
+
 @keyframes goldPulse {
     0% { filter: drop-shadow(0 0 8px #d4af37aa) drop-shadow(0 0 16px #d4af3755); }
     100% { filter: drop-shadow(0 0 18px #ffd700cc) drop-shadow(0 0 32px #d4af37aa); }
@@ -395,6 +408,7 @@ a:hover {
     margin-bottom: 18px;
     line-height: 1.08;
 }
+
 .hero-subtitle {
     font-size: 1.32rem;
     color: #fffbe6;
@@ -402,6 +416,7 @@ a:hover {
     margin-bottom: 32px;
     text-shadow: 0 2px 12px #0a254055;
 }
+
 .luxury-hero-content {
     background: rgba(10,37,64,0.42);
     border-radius: 22px;
@@ -412,27 +427,30 @@ a:hover {
     z-index: 2;
     position: relative;
 }
+
 @media (max-width: 900px) {
     .luxury-hero-content { padding: 26px 14px; }
     .luxury-headline { font-size: 2rem; }
 }
 
-/* Luxury About Section */
 .luxury-about .container.about-flex {
   display: flex;
   align-items: center;
   gap: 48px;
   padding: 64px 24px 48px 24px;
 }
+
 .luxury-about-image img {
   border-radius: 22px;
   box-shadow: 0 8px 32px #0a254022, 0 2px 12px #d4af3722;
   max-width: 340px;
 }
+
 .luxury-about-content {
   flex: 1;
   padding-left: 16px;
 }
+
 .about-lead {
   font-size: 1.25rem;
   color: #0a2540;
@@ -440,11 +458,13 @@ a:hover {
   margin-bottom: 22px;
   line-height: 1.6;
 }
+
 .about-highlights {
   list-style: none;
   padding: 0;
   margin-bottom: 28px;
 }
+
 .about-highlights li {
   font-size: 1.08rem;
   color: #bfa14b;
@@ -453,6 +473,7 @@ a:hover {
   align-items: center;
   font-weight: 600;
 }
+
 .gold-dot {
   display: inline-block;
   width: 10px;
@@ -462,6 +483,7 @@ a:hover {
   margin-right: 10px;
   box-shadow: 0 1px 4px #ffd70055;
 }
+
 @media (max-width: 900px) {
   .luxury-about .container.about-flex {
     flex-direction: column;
@@ -471,7 +493,6 @@ a:hover {
   .luxury-about-content { padding-left: 0; }
 }
 
-/* Luxury Services Grid & Card */
 .luxury-services-grid {
   display: flex;
   gap: 36px;
@@ -479,6 +500,7 @@ a:hover {
   flex-wrap: wrap;
   justify-content: center;
 }
+
 .luxury-card {
   background: #fff;
   border-radius: 18px;
@@ -491,43 +513,49 @@ a:hover {
   align-items: center;
   transition: box-shadow 0.18s, transform 0.18s;
 }
+
 .luxury-card:hover {
   box-shadow: 0 12px 40px #d4af3733, 0 2px 12px #0a254033;
   transform: translateY(-6px) scale(1.03);
 }
+
 .luxury-card h3 {
   font-size: 1.4rem;
   color: #0a2540;
   font-weight: 700;
   margin: 18px 0 10px 0;
 }
+
 .luxury-card p {
   color: #4b5563;
   font-size: 1.05rem;
   margin-bottom: 20px;
   text-align: center;
 }
+
 @media (max-width: 900px) {
   .luxury-services-grid { flex-direction: column; gap: 18px; }
   .luxury-card { max-width: 100%; }
 }
 
-/* Luxury Yomi Section */
 .luxury-yomi .container.yomi-flex {
   display: flex;
   align-items: center;
   gap: 48px;
   padding: 64px 24px 48px 24px;
 }
+
 .luxury-yomi-image img {
   border-radius: 22px;
   box-shadow: 0 8px 32px #0a254022, 0 2px 12px #d4af3722;
   max-width: 340px;
 }
+
 .luxury-yomi-content {
   flex: 1;
   padding-left: 16px;
 }
+
 .yomi-lead {
   font-size: 1.18rem;
   color: #0a2540;
@@ -535,11 +563,13 @@ a:hover {
   margin-bottom: 18px;
   line-height: 1.6;
 }
+
 .yomi-highlights {
   list-style: none;
   padding: 0;
   margin-bottom: 22px;
 }
+
 .yomi-highlights li {
   font-size: 1.05rem;
   color: #bfa14b;
@@ -548,6 +578,7 @@ a:hover {
   align-items: center;
   font-weight: 600;
 }
+
 @media (max-width: 900px) {
   .luxury-yomi .container.yomi-flex {
     flex-direction: column;
@@ -557,13 +588,13 @@ a:hover {
   .luxury-yomi-content { padding-left: 0; }
 }
 
-/* Luxury Emface Section */
 .luxury-emface .container.emface-flex {
   display: flex;
   flex-direction: column;
   align-items: center;
   padding: 64px 24px 48px 24px;
 }
+
 .luxury-emface-grid {
   display: flex;
   gap: 36px;
@@ -571,25 +602,28 @@ a:hover {
   flex-wrap: wrap;
   justify-content: center;
 }
+
 .luxury-emface-grid .luxury-card {
   min-width: 260px;
   max-width: 320px;
 }
+
 @media (max-width: 900px) {
   .luxury-emface-grid { flex-direction: column; gap: 18px; }
 }
 
-/* Luxury TMJ Section */
 .luxury-tmj .container.tmj-flex {
   display: flex;
   align-items: center;
   gap: 48px;
   padding: 64px 24px 48px 24px;
 }
+
 .luxury-tmj-content {
   flex: 1;
   padding-right: 16px;
 }
+
 .tmj-lead {
   font-size: 1.18rem;
   color: #0a2540;
@@ -597,11 +631,13 @@ a:hover {
   margin-bottom: 18px;
   line-height: 1.6;
 }
+
 .tmj-highlights {
   list-style: none;
   padding: 0;
   margin-bottom: 22px;
 }
+
 .tmj-highlights li {
   font-size: 1.05rem;
   color: #bfa14b;
@@ -610,6 +646,7 @@ a:hover {
   align-items: center;
   font-weight: 600;
 }
+
 .luxury-tmj-image img {
   border-radius: 32px !important;
   box-shadow: 0 8px 32px #3ed6c120, 0 2px 12px #ffe9b055;
@@ -622,17 +659,6 @@ a:hover {
   overflow: hidden;
 }
 
-/* General image softening for all major cards */
-.luxury-card, .service-card, .blog-card, .about-image img, .yomi-image img, .emface-card img {
-  border-radius: 24px !important;
-  overflow: hidden;
-}
-
-/* Remove any accidental hard edge overrides */
-.tmj-remove, .all, .hard, .edgeds, .image {
-  border-radius: 32px !important;
-  overflow: hidden !important;
-}
 @media (max-width: 900px) {
   .luxury-tmj .container.tmj-flex {
     flex-direction: column;
@@ -642,10 +668,10 @@ a:hover {
   .luxury-tmj-content { padding-right: 0; }
 }
 
-/* Luxury Testimonials Section */
 .luxury-testimonials .container {
   padding: 64px 24px 48px 24px;
 }
+
 .luxury-testimonial-slider {
   display: flex;
   gap: 32px;
@@ -653,6 +679,7 @@ a:hover {
   flex-wrap: wrap;
   margin-top: 38px;
 }
+
 .testimonial.luxury-card {
   background: #fffbe6;
   border: 2px solid #ffd70033;
@@ -670,12 +697,14 @@ a:hover {
   margin-bottom: 0;
   transition: box-shadow 0.18s, transform 0.18s;
 }
+
 .testimonial.luxury-card .author {
   color: #bfa14b;
   font-weight: 700;
   margin-top: 12px;
   font-style: normal;
 }
+
 @media (max-width: 900px) {
   .luxury-testimonial-slider { flex-direction: column; gap: 18px; }
   .testimonial.luxury-card { max-width: 100%; }
@@ -686,6 +715,7 @@ a:hover {
     gap: 18px;
     margin-bottom: 28px;
 }
+
 .luxury-cta {
     background: linear-gradient(90deg, #d4af37 0%, #fffbe6 100%);
     color: #0a2540;
@@ -697,11 +727,13 @@ a:hover {
     border: 1.5px solid #d4af37;
     transition: background 0.18s, color 0.18s, box-shadow 0.18s;
 }
+
 .luxury-cta:hover {
     background: linear-gradient(90deg, #fffbe6 0%, #d4af37 100%);
     color: #bfa14b;
     box-shadow: 0 4px 22px #d4af3733;
 }
+
 .luxury-secondary-cta {
     background: rgba(255,255,255,0.14);
     color: #fff;
@@ -712,18 +744,21 @@ a:hover {
     font-size: 1.09rem;
     transition: background 0.18s, color 0.18s, box-shadow 0.18s;
 }
+
 .luxury-secondary-cta:hover {
     background: #fffbe6;
     color: #bfa14b;
     border-color: #d4af37;
     box-shadow: 0 2px 12px #d4af3722;
 }
+
 .hero-trust-bar {
     display: flex;
     align-items: center;
     gap: 18px;
     margin-top: 10px;
 }
+
 .trust-badge {
     background: #fffbe6;
     color: #bfa14b;
@@ -734,21 +769,25 @@ a:hover {
     box-shadow: 0 1px 4px #d4af3722;
     letter-spacing: 0.3px;
 }
+
 .trust-badge.gold-glow {
     background: linear-gradient(90deg, #fffbe6 0%, #ffd700 100%);
     color: #bfa14b;
     box-shadow: 0 2px 12px #ffd70055;
 }
+
 .hero-trust-bar .press-logo {
     height: 32px;
     opacity: 0.9;
     filter: grayscale(1) brightness(1.15) drop-shadow(0 1px 4px #fff8);
     transition: opacity 0.2s, filter 0.2s;
 }
+
 .hero-trust-bar .press-logo:hover {
     opacity: 1;
     filter: grayscale(0) brightness(1.05) drop-shadow(0 2px 8px #d4af3755);
 }
+
 .gold-animated {
     background: linear-gradient(90deg, #fff 30%, #d4af37 60%, #fff 100%);
     background-size: 200% auto;
@@ -757,6 +796,7 @@ a:hover {
     -webkit-background-clip: text;
     animation: goldShine 2.5s linear infinite;
 }
+
 @keyframes goldShine {
     0% { background-position: 0% center; }
     100% { background-position: 200% center; }
@@ -773,14 +813,17 @@ a:hover {
     gap: 18px;
     margin: 32px 0 10px 0;
 }
+
 .award-badge {
     height: 48px;
     filter: drop-shadow(0 2px 8px #d4af3755);
     transition: transform 0.2s;
 }
+
 .award-badge:hover {
     transform: scale(1.08) rotate(-4deg);
 }
+
 .awards-text {
     font-size: 1.2rem;
     color: #fff;
@@ -796,12 +839,14 @@ a:hover {
     gap: 22px;
     margin: 12px 0 0 0;
 }
+
 .press-logo {
     height: 32px;
     opacity: 0.8;
     filter: grayscale(1) brightness(1.2) drop-shadow(0 1px 4px #fff8);
     transition: opacity 0.2s, filter 0.2s;
 }
+
 .press-logo:hover {
     opacity: 1;
     filter: grayscale(0) brightness(1.05) drop-shadow(0 2px 8px #d4af3755);
@@ -819,6 +864,7 @@ a:hover {
     border: 2px solid #fff;
     margin-right: 12px;
 }
+
 .luxury-hero .hero-ctas .button.secondary:hover {
     background: #fff;
     color: var(--secondary-color);
@@ -836,6 +882,7 @@ a:hover {
     letter-spacing: 2px;
     text-shadow: 0 2px 12px #00336655;
 }
+
 .luxury-hero .button.mega-cta:hover {
     background: linear-gradient(90deg,#004080 0%,#d4af37 100%);
     color: #fff;
@@ -881,7 +928,7 @@ header nav ul li a:hover {
     background-color: var(--primary-color);
     color: #fff;
 }
-/* Redesigned Luxury Nav Bar */
+
 .logo-block-glass {
   background: #fff;
   border: 3px solid var(--luxury-gold);
@@ -903,6 +950,7 @@ header nav ul li a:hover {
 .logo-block-glass:hover {
   box-shadow: 0 0 0 6px #e5c97b44, 0 8px 32px #e5c97b33;
 }
+
 .redesigned-logo-img {
   width: 100px;
   height: 100px;
@@ -914,12 +962,14 @@ header nav ul li a:hover {
   box-shadow: none;
   transition: box-shadow 0.18s;
 }
+
 .brand-block {
   display: flex;
   flex-direction: column;
   justify-content: center;
   margin-right: 36px;
 }
+
 .redesigned-brand-title {
   font-family: var(--luxury-heading-font);
   font-size: 2.0rem;
@@ -928,6 +978,7 @@ header nav ul li a:hover {
   letter-spacing: -0.5px;
   margin-bottom: 1px;
 }
+
 .redesigned-brand-tagline {
   font-size: 1.08rem;
   color: var(--luxury-slate);
@@ -935,6 +986,7 @@ header nav ul li a:hover {
   margin-top: 0;
   letter-spacing: 0.2px;
 }
+
 .redesigned-nav-flex {
   display: flex;
   align-items: center;
@@ -944,11 +996,13 @@ header nav ul li a:hover {
   position: relative;
   z-index: 2;
 }
+
 .redesigned-navbar {
   flex: 1;
   display: flex;
   justify-content: flex-end;
 }
+
 @media (max-width: 900px) {
   .logo-block-glass {
     min-width: 54px;
@@ -974,7 +1028,6 @@ header nav ul li a:hover {
   }
 }
 
-/* Redesigned Hero Section */
 .redesigned-hero {
   position: relative;
   min-height: 88vh;
@@ -984,6 +1037,7 @@ header nav ul li a:hover {
   background: var(--navy-gradient), url('../img/hero-bg.jpg') center/cover no-repeat;
   box-shadow: 0 12px 48px rgba(10,37,64,0.12);
 }
+
 .redesigned-hero-content {
   max-width: 700px;
   margin: 0 auto;
@@ -998,6 +1052,7 @@ header nav ul li a:hover {
   flex-direction: column;
   align-items: center;
 }
+
 .redesigned-hero-headline {
   font-size: 3.2rem;
   font-weight: 900;
@@ -1007,6 +1062,7 @@ header nav ul li a:hover {
   line-height: 1.1;
   position: relative;
 }
+
 .gold-swoosh {
   display: block;
   width: 120px;
@@ -1016,18 +1072,21 @@ header nav ul li a:hover {
   margin: 8px auto 0 auto;
   box-shadow: 0 2px 12px #d4af3722;
 }
+
 .redesigned-hero-subtitle {
   color: #fffbe6;
   font-size: 1.25rem;
   margin: 0 0 32px 0;
   text-shadow: 0 1px 8px #0a254055;
 }
+
 .redesigned-hero-ctas {
   display: flex;
   gap: 20px;
   justify-content: center;
   margin-bottom: 28px;
 }
+
 .redesigned-cta {
   font-size: 1.15rem;
   border-radius: 14px;
@@ -1037,21 +1096,25 @@ header nav ul li a:hover {
   border: none;
   transition: background 0.18s, color 0.18s, box-shadow 0.18s, transform 0.15s;
 }
+
 .gold-gradient {
   background: linear-gradient(90deg,#d4af37 0%,#fffbe6 100%);
   color: #0a2540;
   border: 2px solid #d4af37;
 }
+
 .navy-gradient {
   background: linear-gradient(90deg,#0a2540 0%,#223354 100%);
   color: #fff;
   border: 2px solid #223354;
 }
+
 .redesigned-cta:hover {
   transform: translateY(-4px) scale(1.04);
   box-shadow: 0 6px 28px #d4af3755;
   filter: brightness(1.08);
 }
+
 .redesigned-trust-bar {
   display: flex;
   flex-direction: column;
@@ -1059,6 +1122,7 @@ header nav ul li a:hover {
   margin-top: 20px;
   gap: 10px;
 }
+
 .redesigned-badge {
   background: #fffbe6;
   color: #bfa14b;
@@ -1070,27 +1134,32 @@ header nav ul li a:hover {
   box-shadow: 0 1px 8px #d4af3722;
   display: inline-block;
 }
+
 .redesigned-badge.gold-glow {
   background: linear-gradient(90deg, #fffbe6 0%, #ffd700 100%);
   color: #bfa14b;
   box-shadow: 0 2px 12px #ffd70055;
 }
+
 .trust-logos {
   display: flex;
   gap: 18px;
   align-items: center;
   margin-top: 4px;
 }
+
 .redesigned-logo {
   height: 34px;
   filter: grayscale(1) brightness(1.15) drop-shadow(0 1px 4px #fff8);
   opacity: 0.93;
   transition: opacity 0.2s, filter 0.2s;
 }
+
 .redesigned-logo:hover {
   opacity: 1;
   filter: grayscale(0) brightness(1.05) drop-shadow(0 2px 8px #d4af3755);
 }
+
 @media (max-width: 900px) {
   .redesigned-hero-content {
     padding: 34px 10px 28px 10px;
@@ -1112,7 +1181,6 @@ header nav ul li a:hover {
   }
 }
 
-/* Hero Section */
 #hero {
     background: linear-gradient(to right, rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.2)), url('img/hero-background.jpg'); /* Replace with a good background image */
     background-size: cover;
@@ -1277,17 +1345,12 @@ header nav ul li a:hover {
     transform: translateY(40px);
     transition: opacity 0.7s var(--transition), transform 0.7s var(--transition);
 }
-.section-reveal.visible {
-    opacity: 1;
-    transform: none;
-}
 
 .section-reveal.visible {
     opacity: 1;
     transform: none;
 }
 
-/* Hero Video */
 .hero-video {
     position: absolute;
     top: 50%; left: 50%;
@@ -1312,13 +1375,13 @@ header nav ul li a:hover {
     position: absolute;
 }
 
-/* Blog luxury cards */
 .blog-list {
     display: flex;
     flex-direction: column;
     gap: 36px;
     margin: 36px 0 48px 0;
 }
+
 .blog-card {
     background: var(--card-bg);
     border-radius: var(--radius);
@@ -1327,37 +1390,23 @@ header nav ul li a:hover {
     padding: 32px 28px;
     transition: box-shadow var(--transition), border-color var(--transition);
 }
+
 .blog-card:hover {
     box-shadow: 0 8px 32px var(--primary-light, #3b82f6bb);
     border-color: var(--cta);
 }
 
-    background: var(--card-bg);
-    border-radius: 18px;
-    box-shadow: 0 4px 18px var(--green-3, #5d9287, 0.13);
-    border: 2.5px solid var(--accent);
-    padding: 32px 28px;
-    transition: box-shadow 0.2s, border-color 0.2s;
-}
-.blog-card:hover {
-    box-shadow: 0 8px 32px var(--accent, #ffd70055);
-    border-color: var(--pop);
-}
-.blog-card:hover {
-    box-shadow: 0 8px 32px #d4af3755;
-    border-color: #bfa14b;
-}
 .blog-card h2 {
     font-size: 2rem;
     margin-bottom: 8px;
 }
+
 .blog-meta {
     font-size: 1rem;
     color: #888;
     margin-bottom: 10px;
 }
 
-/* Chatbot luxury widget */
 .chatbot-widget {
     position: fixed;
     bottom: 110px; /* moved up so it doesn't overlap Book Now */
@@ -1367,7 +1416,6 @@ header nav ul li a:hover {
     pointer-events: auto;
 }
 
-/* Book Now button assumed class */
 .book-now-btn, .floating-cta {
     position: fixed;
     bottom: 30px;
@@ -1402,10 +1450,12 @@ header nav ul li a:hover {
     justify-content: center;
     transition: box-shadow 0.2s, background 0.2s;
 }
+
 .chatbot-toggle:hover {
     box-shadow: 0 8px 32px #d4af3755;
     background: linear-gradient(120deg,#d4af37 0%,#004080 100%);
 }
+
 .chatbot-window {
     display: none;
     flex-direction: column;
@@ -1420,6 +1470,7 @@ header nav ul li a:hover {
     right: 0;
     border: 2px solid #d4af37;
 }
+
 .chatbot-header {
     background: linear-gradient(90deg,#004080 0%,#d4af37 100%);
     color: #fff;
@@ -1430,6 +1481,7 @@ header nav ul li a:hover {
     justify-content: space-between;
     font-size: 1.1rem;
 }
+
 #chatbot-close {
     background: none;
     border: none;
@@ -1438,6 +1490,7 @@ header nav ul li a:hover {
     cursor: pointer;
     margin-left: 16px;
 }
+
 .chatbot-messages {
     height: 220px;
     overflow-y: auto;
@@ -1448,11 +1501,13 @@ header nav ul li a:hover {
     flex-direction: column;
     gap: 10px;
 }
+
 .chatbot-message {
     margin-bottom: 6px;
     line-height: 1.5;
     max-width: 90%;
 }
+
 .chatbot-message.user span {
     background: linear-gradient(90deg,#004080 0%,#d4af37 100%);
     color: #fff;
@@ -1461,6 +1516,7 @@ header nav ul li a:hover {
     display: inline-block;
     align-self: flex-end;
 }
+
 .chatbot-message.bot span {
     background: #fff;
     color: #333;
@@ -1469,12 +1525,14 @@ header nav ul li a:hover {
     display: inline-block;
     border: 1.5px solid #d4af37;
 }
+
 .chatbot-form {
     display: flex;
     border-top: 1.5px solid #eee;
     padding: 10px 12px;
     background: #fff;
 }
+
 #chatbot-input {
     flex: 1;
     border: 1.5px solid #d4af37;
@@ -1484,6 +1542,7 @@ header nav ul li a:hover {
     outline: none;
     margin-right: 8px;
 }
+
 #chatbot-form button[type="submit"] {
     background: linear-gradient(90deg,#004080 0%,#d4af37 100%);
     color: #fff;
@@ -1495,6 +1554,7 @@ header nav ul li a:hover {
     font-size: 1.05rem;
     transition: background 0.2s;
 }
+
 #chatbot-form button[type="submit"]:hover {
     background: linear-gradient(90deg,#d4af37 0%,#004080 100%);
 }
@@ -1509,7 +1569,6 @@ header nav ul li a:hover {
     }
 }
 
-/* Floating CTA */
 .floating-cta {
     position: fixed;
     bottom: 32px;
@@ -1525,18 +1584,19 @@ header nav ul li a:hover {
     transition: background 0.3s, transform 0.2s;
     animation: bounceIn 1.2s cubic-bezier(.68,-0.55,.27,1.55);
 }
+
 .floating-cta:hover {
     background: linear-gradient(90deg, #003366 0%, #bfa14b 100%);
     color: #fff;
     transform: scale(1.07) translateY(-4px);
 }
+
 @keyframes bounceIn {
     0% { transform: scale(0.7); opacity: 0; }
     60% { transform: scale(1.1); opacity: 1; }
     100% { transform: scale(1); }
 }
 
-/* About Section */
 #about {
     padding: 80px 0;
     background-color: var(--accent-color);
@@ -1561,7 +1621,6 @@ header nav ul li a:hover {
     width: 50%;
 }
 
-/* Services Section */
 #services {
     background: #f8fafc;
     padding: 80px 0;
@@ -1573,13 +1632,6 @@ header nav ul li a:hover {
     justify-content: center;
     margin-top: 36px;
     margin-bottom: 18px;
-}
-@media (max-width: 900px) {
-    .luxury-services-grid {
-        flex-direction: column;
-        gap: 28px;
-        align-items: center;
-    }
 }
 
 #services .luxury-card, .service-card, .blog-card {
@@ -1595,119 +1647,6 @@ header nav ul li a:hover {
     position: relative;
     overflow: hidden;
     backdrop-filter: blur(18px) saturate(1.5);
-}
-
-.glassy-cta {
-    background: rgba(255,255,255,0.25) !important;
-    border: 2.5px solid var(--luxury-gold);
-    box-shadow: 0 6px 32px #d4af3755, 0 2px 8px #fff6;
-    color: var(--luxury-navy) !important;
-    backdrop-filter: blur(14px) saturate(1.5);
-    font-weight: 800;
-    letter-spacing: 0.01em;
-    transition: background 0.18s, color 0.18s, box-shadow 0.18s, border-color 0.18s, transform 0.16s;
-    position: relative;
-    z-index: 1;
-}
-.glassy-cta.gold-gradient {
-    background: linear-gradient(90deg,rgba(255,255,255,0.32) 0%,#ffe9b0 80%,#d4af37 100%) !important;
-    color: #0a2540 !important;
-    border-color: #d4af37;
-}
-.glassy-cta.navy-gradient {
-    background: linear-gradient(90deg,rgba(255,255,255,0.18) 0%,#0a2540 100%) !important;
-    color: #fff !important;
-    border-color: #0a2540;
-}
-.glassy-cta.glass-gold-gradient {
-    background: linear-gradient(90deg,rgba(255,255,255,0.32) 0%,#ffe9b0 80%,#d4af37 100%) !important;
-    color: #0a2540 !important;
-    border-color: #d4af37;
-}
-.glassy-cta:hover, .glassy-cta:focus {
-    background: linear-gradient(90deg,#fffbe6 0%,#ffd700 100%) !important;
-    color: #0a2540 !important;
-    box-shadow: 0 8px 32px #d4af3755, 0 2px 16px #fff8;
-    transform: translateY(-2px) scale(1.03);
-    border-color: #ffd700;
-}
-
-.cta-icon {
-    display: inline-block;
-    margin-left: 7px;
-    font-size: 1.22em;
-    transition: transform 0.2s cubic-bezier(.61,.01,.49,1.03);
-    vertical-align: middle;
-}
-.glassy-cta:hover .cta-icon, .glassy-cta:focus .cta-icon {
-    transform: translateX(5px) scale(1.14);
-}
-
-.luxury-card:hover, .service-card:hover, .blog-card:hover {
-    box-shadow: 0 12px 48px var(--primary-light, #3b82f6aa);
-    transform: translateY(-10px) scale(1.035);
-    border-color: var(--cta);
-}
-.luxury-icon, .service-icon {
-    height: 62px;
-    margin-bottom: 22px;
-    filter: drop-shadow(0 2px 10px var(--primary-light, #3b82f655));
-    transition: filter var(--transition), transform var(--transition);
-}
-.luxury-card:hover .luxury-icon, .service-card:hover .service-icon {
-    filter: drop-shadow(0 4px 16px var(--cta, #ff3b47cc));
-    transform: scale(1.09) rotate(-2deg);
-    animation: icon-bounce 0.45s 1;
-}
-@keyframes icon-bounce {
-    0% { transform: scale(1) rotate(0); }
-    30% { transform: scale(1.13) rotate(-2deg); }
-    60% { transform: scale(0.95) rotate(2deg); }
-    100% { transform: scale(1.09) rotate(-2deg); }
-}
-
-    background: var(--card-bg);
-    border-radius: 22px;
-    box-shadow: 0 6px 32px var(--green-3, #5d9287, 0.11);
-    border: 2.5px solid var(--accent);
-    padding: 46px 34px 38px 34px;
-    flex: 1 1 0;
-    text-align: center;
-    transition: box-shadow 0.25s, transform 0.22s, border-color 0.22s;
-    margin-bottom: 10px;
-    position: relative;
-    overflow: hidden;
-}
-.luxury-card:hover {
-    box-shadow: 0 16px 48px var(--accent, #ffd70044), 0 2px 16px var(--green-3, #5d9287, 0.11);
-    transform: translateY(-8px) scale(1.025);
-    border-color: var(--pop);
-}
-.luxury-icon {
-    height: 62px;
-    margin-bottom: 22px;
-    filter: drop-shadow(0 2px 10px var(--accent, #ffd70055));
-    transition: filter 0.25s, transform 0.22s;
-}
-.luxury-card:hover .luxury-icon {
-    filter: drop-shadow(0 4px 16px var(--accent, #ffd700cc));
-    transform: scale(1.09) rotate(-2deg);
-}
-
-.luxury-card:hover {
-    box-shadow: 0 16px 48px rgba(212,175,55,0.14), 0 2px 16px rgba(0,64,128,0.11);
-    transform: translateY(-8px) scale(1.025);
-    border-color: #bfa14b;
-}
-.luxury-icon {
-    height: 62px;
-    margin-bottom: 22px;
-    filter: drop-shadow(0 2px 10px #d4af3755);
-    transition: filter 0.25s, transform 0.22s;
-}
-.luxury-card:hover .luxury-icon {
-    filter: drop-shadow(0 4px 16px #d4af37cc);
-    transform: scale(1.09) rotate(-2deg);
 }
 
 #services .service-card {
@@ -1736,7 +1675,6 @@ header nav ul li a:hover {
     object-fit: contain; /* Keep aspect ratio */
 }
 
-/* Testimonials Section */
 #testimonials {
     background: #fff;
     padding: 80px 0;
@@ -1772,8 +1710,6 @@ header nav ul li a:hover {
     font-size: 1.05rem;
 }
 
-/* Gallery Section */
-/* Gallery Section */
 #gallery {
     background: #f8fafc;
     padding: 80px 0;
@@ -1814,7 +1750,6 @@ header nav ul li a:hover {
     box-shadow: 0 8px 24px rgba(0,64,128,0.13);
 }
 
-/* Contact Section */
 #contact {
     padding: 80px 0;
     background-color: #f9f9f9;
@@ -1870,7 +1805,6 @@ header nav ul li a:hover {
     height: 30px;
 }
 
-/* Footer */
 footer {
     background-color: var(--primary-color);
     color: #fff;
@@ -1886,7 +1820,6 @@ footer a:hover {
     color: #fff;
 }
 
-/* Hamburger Menu */
 .hamburger {
     display: none;
     cursor: pointer;
@@ -1916,7 +1849,6 @@ footer a:hover {
     transform: rotate(-45deg) translate(7px, -7px);
 }
 
-/* Media Queries */
 @media (max-width: 992px) {
     .container {
         padding: 15px;

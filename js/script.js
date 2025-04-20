@@ -10,6 +10,7 @@ $(document).ready(function(){
         });
     }, { threshold: 0.18 });
     revealSections.forEach(sec => revealObserver.observe(sec));
+
     // Register GSAP ScrollTrigger plugin
     gsap.registerPlugin(ScrollTrigger);
 
