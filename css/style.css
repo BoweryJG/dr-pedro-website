@@ -881,6 +881,88 @@ header nav ul li a:hover {
     background-color: var(--primary-color);
     color: #fff;
 }
+/* Redesigned Luxury Nav Bar */
+.logo-block-glass {
+  background: var(--luxury-glass);
+  border: 2.5px solid var(--luxury-gold);
+  box-shadow: 0 4px 18px #e5c97b33, 0 1.5px 8px #fff6;
+  border-radius: 50%;
+  padding: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 28px;
+  transition: box-shadow 0.18s;
+}
+.logo-block-glass:hover {
+  box-shadow: 0 0 0 6px #e5c97b44, 0 8px 32px #e5c97b33;
+}
+.redesigned-logo-img {
+  width: 84px;
+  height: 84px;
+  border-radius: 50%;
+  background: #fff;
+  object-fit: contain;
+  box-shadow: none;
+  margin: 0;
+  transition: box-shadow 0.18s;
+}
+.brand-block {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-right: 36px;
+}
+.redesigned-brand-title {
+  font-family: var(--luxury-heading-font);
+  font-size: 2.0rem;
+  color: var(--luxury-navy);
+  font-weight: 900;
+  letter-spacing: -0.5px;
+  margin-bottom: 1px;
+}
+.redesigned-brand-tagline {
+  font-size: 1.08rem;
+  color: var(--luxury-slate);
+  font-weight: 500;
+  margin-top: 0;
+  letter-spacing: 0.2px;
+}
+.redesigned-nav-flex {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 0;
+  min-height: 110px;
+}
+.redesigned-navbar {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+}
+@media (max-width: 900px) {
+  .logo-block-glass {
+    padding: 7px;
+    margin-right: 12px;
+  }
+  .redesigned-logo-img {
+    width: 46px;
+    height: 46px;
+  }
+  .brand-block {
+    margin-right: 12px;
+  }
+  .redesigned-brand-title {
+    font-size: 1.1rem;
+  }
+  .redesigned-brand-tagline {
+    font-size: 0.85rem;
+  }
+  .redesigned-nav-flex {
+    min-height: 64px;
+  }
+}
+
 /* Redesigned Hero Section */
 .redesigned-hero {
   position: relative;
