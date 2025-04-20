@@ -335,6 +335,253 @@ a:hover {
     .luxury-hero-content { padding: 26px 14px; }
     .luxury-headline { font-size: 2rem; }
 }
+
+/* Luxury About Section */
+.luxury-about .container.about-flex {
+  display: flex;
+  align-items: center;
+  gap: 48px;
+  padding: 64px 24px 48px 24px;
+}
+.luxury-about-image img {
+  border-radius: 22px;
+  box-shadow: 0 8px 32px #0a254022, 0 2px 12px #d4af3722;
+  max-width: 340px;
+}
+.luxury-about-content {
+  flex: 1;
+  padding-left: 16px;
+}
+.about-lead {
+  font-size: 1.25rem;
+  color: #0a2540;
+  font-weight: 500;
+  margin-bottom: 22px;
+  line-height: 1.6;
+}
+.about-highlights {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 28px;
+}
+.about-highlights li {
+  font-size: 1.08rem;
+  color: #bfa14b;
+  margin-bottom: 8px;
+  display: flex;
+  align-items: center;
+  font-weight: 600;
+}
+.gold-dot {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  background: linear-gradient(90deg, #ffd700 0%, #fffbe6 100%);
+  border-radius: 50%;
+  margin-right: 10px;
+  box-shadow: 0 1px 4px #ffd70055;
+}
+@media (max-width: 900px) {
+  .luxury-about .container.about-flex {
+    flex-direction: column;
+    gap: 24px;
+    padding: 32px 8px 24px 8px;
+  }
+  .luxury-about-content { padding-left: 0; }
+}
+
+/* Luxury Services Grid & Card */
+.luxury-services-grid {
+  display: flex;
+  gap: 36px;
+  margin-top: 38px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.luxury-card {
+  background: #fff;
+  border-radius: 18px;
+  box-shadow: 0 6px 32px #d4af3720, 0 1px 8px #0a254022;
+  padding: 38px 28px 32px 28px;
+  max-width: 330px;
+  flex: 1 1 300px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: box-shadow 0.18s, transform 0.18s;
+}
+.luxury-card:hover {
+  box-shadow: 0 12px 40px #d4af3733, 0 2px 12px #0a254033;
+  transform: translateY(-6px) scale(1.03);
+}
+.luxury-card h3 {
+  font-size: 1.4rem;
+  color: #0a2540;
+  font-weight: 700;
+  margin: 18px 0 10px 0;
+}
+.luxury-card p {
+  color: #4b5563;
+  font-size: 1.05rem;
+  margin-bottom: 20px;
+  text-align: center;
+}
+@media (max-width: 900px) {
+  .luxury-services-grid { flex-direction: column; gap: 18px; }
+  .luxury-card { max-width: 100%; }
+}
+
+/* Luxury Yomi Section */
+.luxury-yomi .container.yomi-flex {
+  display: flex;
+  align-items: center;
+  gap: 48px;
+  padding: 64px 24px 48px 24px;
+}
+.luxury-yomi-image img {
+  border-radius: 22px;
+  box-shadow: 0 8px 32px #0a254022, 0 2px 12px #d4af3722;
+  max-width: 340px;
+}
+.luxury-yomi-content {
+  flex: 1;
+  padding-left: 16px;
+}
+.yomi-lead {
+  font-size: 1.18rem;
+  color: #0a2540;
+  font-weight: 500;
+  margin-bottom: 18px;
+  line-height: 1.6;
+}
+.yomi-highlights {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 22px;
+}
+.yomi-highlights li {
+  font-size: 1.05rem;
+  color: #bfa14b;
+  margin-bottom: 8px;
+  display: flex;
+  align-items: center;
+  font-weight: 600;
+}
+@media (max-width: 900px) {
+  .luxury-yomi .container.yomi-flex {
+    flex-direction: column;
+    gap: 24px;
+    padding: 32px 8px 24px 8px;
+  }
+  .luxury-yomi-content { padding-left: 0; }
+}
+
+/* Luxury Emface Section */
+.luxury-emface .container.emface-flex {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 64px 24px 48px 24px;
+}
+.luxury-emface-grid {
+  display: flex;
+  gap: 36px;
+  margin-top: 38px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.luxury-emface-grid .luxury-card {
+  min-width: 260px;
+  max-width: 320px;
+}
+@media (max-width: 900px) {
+  .luxury-emface-grid { flex-direction: column; gap: 18px; }
+}
+
+/* Luxury TMJ Section */
+.luxury-tmj .container.tmj-flex {
+  display: flex;
+  align-items: center;
+  gap: 48px;
+  padding: 64px 24px 48px 24px;
+}
+.luxury-tmj-content {
+  flex: 1;
+  padding-right: 16px;
+}
+.tmj-lead {
+  font-size: 1.18rem;
+  color: #0a2540;
+  font-weight: 500;
+  margin-bottom: 18px;
+  line-height: 1.6;
+}
+.tmj-highlights {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 22px;
+}
+.tmj-highlights li {
+  font-size: 1.05rem;
+  color: #bfa14b;
+  margin-bottom: 8px;
+  display: flex;
+  align-items: center;
+  font-weight: 600;
+}
+.luxury-tmj-image img {
+  border-radius: 22px;
+  box-shadow: 0 8px 32px #0a254022, 0 2px 12px #d4af3722;
+  max-width: 340px;
+}
+@media (max-width: 900px) {
+  .luxury-tmj .container.tmj-flex {
+    flex-direction: column;
+    gap: 24px;
+    padding: 32px 8px 24px 8px;
+  }
+  .luxury-tmj-content { padding-right: 0; }
+}
+
+/* Luxury Testimonials Section */
+.luxury-testimonials .container {
+  padding: 64px 24px 48px 24px;
+}
+.luxury-testimonial-slider {
+  display: flex;
+  gap: 32px;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 38px;
+}
+.testimonial.luxury-card {
+  background: #fffbe6;
+  border: 2px solid #ffd70033;
+  border-radius: 18px;
+  box-shadow: 0 6px 32px #d4af3720, 0 1px 8px #0a254022;
+  padding: 32px 26px 28px 26px;
+  max-width: 340px;
+  flex: 1 1 280px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 1.08rem;
+  color: #0a2540;
+  font-style: italic;
+  margin-bottom: 0;
+  transition: box-shadow 0.18s, transform 0.18s;
+}
+.testimonial.luxury-card .author {
+  color: #bfa14b;
+  font-weight: 700;
+  margin-top: 12px;
+  font-style: normal;
+}
+@media (max-width: 900px) {
+  .luxury-testimonial-slider { flex-direction: column; gap: 18px; }
+  .testimonial.luxury-card { max-width: 100%; }
+}
+
 .hero-cta-group {
     display: flex;
     gap: 18px;
