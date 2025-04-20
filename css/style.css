@@ -1,4 +1,434 @@
-/* General Styles */
+/* Luxury Dental Site: Modern Reset */
+:root {
+  --primary: #0a2540;
+  --accent: #d4af37;
+  --background: #f7f8fa;
+  --card-bg: #fff;
+  --navy: #0a2540;
+  --gold: #d4af37;
+  --ivory: #f7f8fa;
+  --shadow: 0 8px 32px #0a254033, 0 1.5px 8px #d4af3722;
+  --radius: 20px;
+  --transition: 0.18s cubic-bezier(.61,.01,.49,1.03);
+  --heading-font: 'Poppins', sans-serif;
+  --body-font: 'Inter', 'Poppins', Arial, sans-serif;
+  --gold-gradient: linear-gradient(90deg, #fffbe6 0%, #d4af37 50%, #fffbe6 100%);
+  --cta-gradient: linear-gradient(90deg, #3ed6c1 0%, #0a2540 100%);
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  font-family: var(--body-font);
+  background: var(--background);
+  color: var(--primary);
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 24px 16px;
+  background: var(--ivory);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+}
+
+header.luxury-nav {
+  background: rgba(255,255,255,0.96);
+  box-shadow: var(--shadow);
+  border-bottom: 2px solid var(--gold);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+.nav-flex {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 0;
+}
+.logo-block-glass img {
+  border-radius: 50%;
+  background: #fff;
+  box-shadow: 0 2px 12px #d4af3722;
+}
+.brand-title {
+  font-family: var(--heading-font);
+  font-size: 2.2rem;
+  font-weight: 900;
+  color: var(--primary);
+  letter-spacing: -1.5px;
+  background: var(--gold-gradient);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  -webkit-text-fill-color: transparent;
+}
+.brand-tagline {
+  font-size: 1.1rem;
+  color: var(--accent);
+  font-weight: 600;
+  margin-left: 14px;
+  letter-spacing: 0.6px;
+  opacity: 0.76;
+}
+.redesigned-navbar ul {
+  display: flex;
+  gap: 28px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.redesigned-nav-link {
+  font-size: 1.13rem;
+  font-weight: 700;
+  color: var(--primary);
+  text-decoration: none;
+  padding: 8px 0;
+  transition: color 0.18s;
+}
+.redesigned-nav-link:hover, .redesigned-nav-cta {
+  color: var(--gold);
+}
+.redesigned-nav-cta {
+  background: var(--gold-gradient);
+  color: var(--primary);
+  border-radius: 12px;
+  padding: 8px 18px;
+  font-weight: 700;
+}
+
+.luxury-hero {
+  background: var(--gold-gradient);
+  padding: 48px 0 32px 0;
+  border-radius: 0 0 40px 40px;
+  box-shadow: 0 8px 32px #d4af3722;
+}
+.hero-flex {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.luxury-headline {
+  font-family: var(--heading-font);
+  font-size: 2.8rem;
+  font-weight: 800;
+  color: var(--navy);
+  margin-bottom: 18px;
+  letter-spacing: -1px;
+}
+.highlight {
+  color: var(--gold);
+  background: linear-gradient(90deg, #fffbe6 60%, #fff0 100%);
+  padding: 0 0.2em;
+  border-radius: 4px;
+  font-weight: 700;
+}
+.hero-subtitle {
+  font-size: 1.28rem;
+  color: var(--navy);
+  margin-bottom: 24px;
+  opacity: 0.88;
+}
+.hero-cta-group {
+  display: flex;
+  gap: 18px;
+  margin-bottom: 18px;
+}
+.button {
+  padding: 12px 32px;
+  border-radius: 12px;
+  font-weight: 700;
+  font-size: 1.1rem;
+  border: none;
+  cursor: pointer;
+  background: var(--gold-gradient);
+  color: var(--navy);
+  box-shadow: 0 4px 12px #e5c97b44;
+  transition: background 0.18s, color 0.18s, box-shadow 0.18s;
+  text-decoration: none;
+  display: inline-block;
+}
+.button.secondary {
+  background: var(--cta-gradient);
+  color: #fff;
+}
+.button:hover {
+  filter: brightness(1.08);
+  box-shadow: 0 8px 24px #e5c97b44;
+}
+
+.trust-badge {
+  background: #fffbe6;
+  color: var(--gold);
+  border-radius: 8px;
+  padding: 4px 16px;
+  font-weight: 700;
+  font-size: 1rem;
+  margin-right: 10px;
+  box-shadow: 0 2px 8px #d4af3722;
+}
+.trust-logos img {
+  height: 28px;
+  margin-right: 10px;
+}
+
+/* About Section */
+.luxury-about {
+  background: #fff;
+  padding: 40px 0 24px 0;
+  border-radius: 32px;
+  margin-top: 32px;
+  margin-bottom: 0;
+}
+.about-flex {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  align-items: center;
+}
+.about-image img {
+  width: 320px;
+  border-radius: 16px;
+  box-shadow: 0 4px 18px #0a254022;
+}
+.about-content {
+  flex: 1;
+}
+.about-highlights {
+  list-style: none;
+  padding: 0;
+  margin: 18px 0 18px 0;
+}
+.about-highlights li {
+  margin-bottom: 8px;
+  font-weight: 500;
+  color: var(--navy);
+}
+.gold-dot {
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  background: var(--gold);
+  border-radius: 50%;
+  margin-right: 8px;
+}
+
+/* Testimonials */
+#testimonials {
+  background: #f8fafc;
+  padding: 32px 0 24px 0;
+}
+.testimonial-slider {
+  display: flex;
+  gap: 28px;
+  overflow-x: auto;
+  margin-top: 18px;
+}
+.testimonial {
+  background: #fff;
+  border-radius: 18px;
+  box-shadow: 0 2px 8px #d4af3722;
+  padding: 24px;
+  min-width: 320px;
+  max-width: 380px;
+  flex: 0 0 auto;
+}
+.testimonial .author {
+  font-style: italic;
+  color: var(--gold);
+  margin-top: 12px;
+}
+
+/* Services */
+.luxury-section {
+  background: #fff;
+  padding: 40px 0 24px 0;
+  margin: 0;
+}
+.services-grid {
+  display: flex;
+  gap: 32px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.service-card {
+  background: #f8fafc;
+  border-radius: 18px;
+  box-shadow: 0 2px 8px #d4af3722;
+  padding: 28px 18px 22px 18px;
+  min-width: 260px;
+  max-width: 340px;
+  flex: 1 1 320px;
+  text-align: center;
+}
+.service-icon {
+  height: 48px;
+  margin-bottom: 12px;
+}
+
+/* Gallery */
+#gallery {
+  background: #fff;
+  padding: 40px 0 24px 0;
+}
+.gallery-grid {
+  display: flex;
+  gap: 28px;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 18px;
+}
+.gallery-item {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  background: #f8fafc;
+  border-radius: 18px;
+  box-shadow: 0 2px 8px #d4af3722;
+  padding: 12px;
+}
+.gallery-item img {
+  width: 180px;
+  border-radius: 10px;
+}
+
+/* Contact */
+#contact {
+  background: #f8fafc;
+  padding: 40px 0 24px 0;
+}
+.contact-form {
+  max-width: 400px;
+  margin-bottom: 18px;
+}
+.form-group {
+  margin-bottom: 16px;
+}
+input, textarea {
+  width: 100%;
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  font-size: 1rem;
+  margin-top: 4px;
+}
+input:focus, textarea:focus {
+  outline: 2px solid var(--gold);
+  border-color: var(--gold);
+}
+.button.primary {
+  background: var(--gold-gradient);
+  color: var(--navy);
+}
+.contact-details {
+  margin-top: 18px;
+}
+.social-links img {
+  width: 32px;
+  margin-right: 10px;
+}
+
+/* Floating CTA */
+.floating-cta {
+  position: fixed;
+  right: 32px;
+  bottom: 32px;
+  background: var(--cta-gradient);
+  color: #fff;
+  padding: 18px 38px;
+  border-radius: 32px;
+  font-size: 1.25rem;
+  font-weight: 700;
+  box-shadow: 0 8px 32px #0a254044;
+  z-index: 9999;
+  text-decoration: none;
+  transition: background 0.18s, color 0.18s;
+}
+.floating-cta:hover {
+  background: var(--gold-gradient);
+  color: var(--navy);
+}
+
+/* Footer */
+footer {
+  background: #fffbe6;
+  padding: 18px 0;
+  text-align: center;
+  font-size: 1rem;
+  color: var(--navy);
+  border-top: 2px solid var(--gold);
+}
+
+/* Chatbot */
+.chatbot-container {
+  position: fixed;
+  right: 32px;
+  bottom: 100px;
+  width: 340px;
+  max-width: 90vw;
+  background: #fff;
+  border-radius: 18px 18px 0 0;
+  box-shadow: 0 8px 32px #0a254033;
+  z-index: 99999;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+.chatbot-messages {
+  height: 220px;
+  overflow-y: auto;
+  padding: 16px;
+  background: #f8fafc;
+  font-size: 1rem;
+}
+.chatbot-form {
+  display: flex;
+  padding: 12px;
+  border-top: 1px solid #eee;
+  background: #fff;
+}
+#chatbot-input {
+  flex: 1;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  padding: 8px;
+  font-size: 1rem;
+  margin-right: 8px;
+}
+.chatbot-form button {
+  background: var(--gold-gradient);
+  color: var(--navy);
+  border: none;
+  border-radius: 8px;
+  padding: 8px 18px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+/* Responsive Design */
+@media (max-width: 900px) {
+  .container, .luxury-about, #gallery, #testimonials, #services, #contact {
+    padding: 18px 4vw;
+  }
+  .about-flex, .services-grid, .gallery-grid, .testimonial-slider {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 18px;
+  }
+  .floating-cta, .chatbot-container {
+    right: 16px;
+    bottom: 16px;
+  }
+  .chatbot-container {
+    width: 96vw;
+    max-width: 96vw;
+  }
+}
+
 :root {
     --primary: #0a2540; /* Deep Navy */
     --primary-light: #f5f7fa; /* Soft Off-White */
