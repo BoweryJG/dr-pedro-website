@@ -69,9 +69,9 @@
                     <span class="trust-badge gold-glow redesigned-badge">🏆 Multi Award-Winning</span>
                     <span class="trust-badge redesigned-badge">As Seen On</span>
                     <div class="trust-logos">
-                        <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/ABC_News_solid_black_logo.png" alt="ABC News" class="press-logo redesigned-logo">
-                        <img src="https://upload.wikimedia.org/wikipedia/commons/6/6f/Fox_News_Channel_logo.svg" alt="Fox News" class="press-logo redesigned-logo">
-                        <img src="https://upload.wikimedia.org/wikipedia/commons/4/4c/NBC_News_2011.png" alt="NBC News" class="press-logo redesigned-logo">
+                        <img src="img/abcnews.svg" alt="ABC News" class="press-logo redesigned-logo">
+                        <img src="img/foxnews.svg" alt="Fox News" class="press-logo redesigned-logo">
+                        <img src="img/nbcnews.svg" alt="NBC News" class="press-logo redesigned-logo">
                     </div>
                 </div>
             </div>
@@ -172,19 +172,19 @@
                 <form id="contactForm" action="#" method="POST">  <!-- Replace # with your form submission URL -->
                     <div class="form-group">
                         <label for="name">Name:</label>
-                        <input type="text" id="name" name="name" required>
+                        <input type="text" id="name" name="name" autocomplete="name" required>
                     </div>
                     <div class="form-group">
                         <label for="email">Email:</label>
-                        <input type="email" id="email" name="email" required>
+                        <input type="email" id="email" name="email" autocomplete="email" required>
                     </div>
                     <div class="form-group">
                         <label for="phone">Phone:</label>
-                        <input type="tel" id="phone" name="phone">
+                        <input type="tel" id="phone" name="phone" autocomplete="tel">
                     </div>
                     <div class="form-group">
                         <label for="message">Message:</label>
-                        <textarea id="message" name="message" rows="5" required></textarea>
+                        <textarea id="message" name="message" rows="5" required autocomplete="off"></textarea>
                     </div>
                     <button type="submit" class="button primary">Send Message</button>
                     <p id="formMessage"></p>
@@ -212,15 +212,17 @@
         </div>
     </footer>
 
+    <!-- Chatbot Section (properly placed and wrapped) -->
+    <div class="chatbot-container">
+        <div class="chatbot-messages" id="chatbot-messages"></div>
+        <form id="chatbot-form" class="chatbot-form">
+            <input type="text" id="chatbot-input" placeholder="Type your question..." autocomplete="off" required />
+            <button type="submit">Send</button>
+        </form>
+    </div>
+
     <script src="js/script.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
-            <div class="chatbot-messages" id="chatbot-messages"></div>
-            <form id="chatbot-form" class="chatbot-form">
-                <input type="text" id="chatbot-input" placeholder="Type your question..." autocomplete="off" required />
-                <button type="submit">Send</button>
-            </form>
-        </div>
-    </div>
     <script src="js/chatbot.js"></script>
 </body>
 </html>
