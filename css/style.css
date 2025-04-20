@@ -63,7 +63,7 @@ body {
 .container {
     max-width: 1200px;
     margin: 0 auto;
-    padding: 40px 24px 40px 24px;
+    padding: 24px 12px 24px 12px;
     background: var(--luxury-ivory);
     border-radius: var(--luxury-radius);
     box-shadow: var(--luxury-shadow);
@@ -1338,6 +1338,11 @@ header nav ul li a:hover {
     box-shadow: 0 8px 48px rgba(0,64,128,0.13);
     max-width: 420px;
     width: 100%;
+}
+
+.section {
+    margin: 32px 0 !important;
+    padding: 32px 0 !important;
 }
 
 .section-reveal {
