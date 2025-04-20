@@ -3,7 +3,27 @@
     --primary: #0a2540; /* Deep Navy */
     --primary-light: #f5f7fa; /* Soft Off-White */
     --accent: #d4af37; /* Elegant Gold */
-    --cta: #3ed6c1; /* Aqua for CTAs */
+    --luxury-navy: #0a2540; /* Deep Navy */
+    --luxury-champagne: #e5c97b; /* Champagne */
+    --luxury-gold: #d4af37; /* Elegant Gold */
+    --luxury-white: #fff; /* Soft White */
+    --luxury-ivory: #f7f8fa; /* Soft Ivory */
+    --luxury-muted-blue: #87a2b5; /* Muted Blue */
+    --luxury-nav-bg: #0a2540; /* Deep Navy */
+    --luxury-nav-border: #d4af37; /* Elegant Gold */
+    --luxury-nav-text: #fff; /* Soft White */
+    --luxury-nav-hover-bg: #e5c97b; /* Champagne */
+    --luxury-nav-active: #0a2540; /* Deep Navy */
+    --luxury-btn-gold: #d4af37; /* Elegant Gold */
+    --luxury-btn-shadow: 0 4px 24px #e5c97b44; /* Champagne Shadow */
+    --luxury-btn-radius: 14px; /* Button Radius */
+    --luxury-transition: 0.18s cubic-bezier(.61,.01,.49,1.03); /* Transition */
+    --luxury-shadow: 0 8px 32px #0a254033, 0 1.5px 8px #d4af3722; /* Shadow */
+    --luxury-radius: 20px; /* Radius */
+    --luxury-heading-font: 'Poppins', sans-serif; /* Heading Font */
+    --luxury-body-font: 'Inter', 'Poppins', Arial, sans-serif; /* Body Font */
+    --luxury-glass: rgba(255,255,255,0.90); /* Luxury Glass */
+    --luxury-gold-gradient: linear-gradient(90deg, #d4af37 0%, #fffbe6 100%); /* Gold Gradient */
     --bg: #f7f8fa; /* Gentle Background */
     --card-bg: #fff;
     --text: #222b36; /* Rich Charcoal */
@@ -44,12 +64,14 @@ body {
     max-width: 1200px;
     margin: 0 auto;
     padding: 40px 24px 40px 24px;
-    background: var(--card-bg);
+    background: var(--luxury-ivory);
+    border-radius: var(--luxury-radius);
+    box-shadow: var(--luxury-shadow);
 }
 
 h1, h2, h3 {
-    font-family: var(--heading-font);
-    color: var(--primary);
+    font-family: var(--luxury-heading-font);
+    color: var(--luxury-navy);
     margin-bottom: 15px;
     line-height: 1.1;
     letter-spacing: -0.5px;
@@ -63,8 +85,8 @@ h1 {
 }
 
 .highlight {
-    color: var(--secondary-color);
-    background: linear-gradient(90deg, #fff 60%, #fff0 100%);
+    color: var(--luxury-gold);
+    background: linear-gradient(90deg, #fffbe6 60%, #fff0 100%);
     padding: 0 0.2em;
     border-radius: 4px;
     font-weight: 700;
@@ -112,30 +134,35 @@ a:hover {
 }
 
 .button.primary, .button.mega-cta {
-    background: var(--cta-gradient);
-    color: #fff;
-    box-shadow: 0 6px 24px rgba(0,64,128,0.10);
+    background: var(--luxury-gold-gradient);
+    color: var(--luxury-navy);
+    box-shadow: var(--luxury-btn-shadow);
+    border-radius: var(--luxury-btn-radius);
+    border: 2px solid var(--luxury-gold);
+    font-weight: 800;
 }
 
 .button.primary:hover, .button.mega-cta:hover {
-    background: linear-gradient(90deg, #003366 0%, #bfa14b 100%);
-    color: #fff;
+    background: var(--luxury-gold);
+    color: var(--luxury-navy);
     transform: translateY(-3px) scale(1.03);
-    box-shadow: 0 8px 24px rgba(0,0,0,0.16);
+    box-shadow: 0 8px 24px #e5c97b44;
 }
 
 .button.secondary {
-    background-color: var(--accent-color);
-    color: var(--primary-color);
-    border: 2px solid var(--primary-color);
+    background: var(--luxury-navy-gradient);
+    color: var(--luxury-champagne);
+    border: 2px solid var(--luxury-gold);
+    border-radius: var(--luxury-btn-radius);
+    font-weight: 700;
 }
 
 .button.secondary:hover {
-    background-color: #f9f9f9;
-    color: var(--secondary-color);
-    border-color: var(--secondary-color);
+    background: var(--luxury-gold);
+    color: var(--luxury-navy);
+    border-color: var(--luxury-gold);
     transform: translateY(-2px) scale(1.01);
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.13);
+    box-shadow: 0 4px 12px #e5c97b44;
 }
 
 .button.mega-cta {
