@@ -1,5 +1,5 @@
 // Simple front-end chatbot UI (replace with real API for production)
-const chatbotWidget = document.getElementById('chatbot-widget');
+var chatbotWidget = document.getElementById('chatbot-widget');
 const chatbotToggle = document.getElementById('chatbot-toggle');
 const chatbotWindow = document.getElementById('chatbot-window');
 const chatbotClose = document.getElementById('chatbot-close');
