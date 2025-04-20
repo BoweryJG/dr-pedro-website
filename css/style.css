@@ -1,19 +1,28 @@
 /* General Styles */
 :root {
-    --primary: #0a2540; /* deep blue */
-    --primary-light: #3b82f6; /* bright blue */
-    --accent: #00e887; /* neon green */
-    --cta: #ff3b47; /* coral red for CTAs */
-    --bg: #f9fafe;
+    --primary: #1a2238; /* deep navy */
+    --primary-light: #28304a;
+    --accent: #d4af37; /* rich gold */
+    --cta: #d4af37; /* gold for CTAs */
+    --bg: #f8f6f1; /* soft white */
     --card-bg: #fff;
-    --text: #0a2540;
-    --text-light: #4b5563;
+    --text: #1a2238;
+    --text-light: #4b5563; /* cool gray */
     --border: #e5e7eb;
-    --shadow: 0 4px 32px 0 rgba(44,62,80,0.12);
+    --shadow: 0 4px 32px 0 rgba(26,34,56,0.12);
     --radius: 18px;
     --transition: 0.18s cubic-bezier(.61,.01,.49,1.03);
     --heading-font: 'Poppins', sans-serif;
     --body-font: 'Inter', 'Poppins', Arial, sans-serif;
+}
+
+:root {
+    --primary-color: #1a2238; /* Deep Navy */
+    --secondary-color: #d4af37; /* Rich Gold */
+    --background-color: #f8f6f1; /* Soft White */
+    --card-background: #fff;
+    --text-color: #1a2238;
+    --text-secondary: #4b5563;
 }
 
 body {
