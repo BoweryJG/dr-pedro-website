@@ -15,16 +15,20 @@ function appendMessage(sender, text) {
   chatbotMessages.scrollTop = chatbotMessages.scrollHeight;
 }
 
-chatbotToggle.onclick = () => {
-  chatbotWindow.style.display = 'block';
-  chatbotToggle.style.display = 'none';
-};
-chatbotClose.onclick = () => {
-  chatbotWindow.style.display = 'none';
-  chatbotToggle.style.display = 'block';
-};
-
-chatbotForm.onsubmit = function(e) {
+if (chatbotToggle) {
+  chatbotToggle.onclick = () => {
+    chatbotWindow.style.display = 'block';
+    chatbotToggle.style.display = 'none';
+  };
+}
+if (chatbotClose) {
+  chatbotClose.onclick = () => {
+    chatbotWindow.style.display = 'none';
+    chatbotToggle.style.display = 'block';
+  };
+}
+if (chatbotForm) {
+  chatbotForm.onsubmit = function(e) {
   e.preventDefault();
   const userMsg = chatbotInput.value.trim();
   if (!userMsg) return;
@@ -34,7 +38,8 @@ chatbotForm.onsubmit = function(e) {
   setTimeout(() => {
     appendMessage('bot', getBotResponse(userMsg));
   }, 800);
-};
+  };
+}
 
 function getBotResponse(msg) {
   msg = msg.toLowerCase();

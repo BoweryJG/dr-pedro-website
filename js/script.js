@@ -48,15 +48,17 @@ $(document).ready(function(){
     });
 
     // Testimonial Slider
-    $('.testimonial-slider').slick({
-        dots: true,
-        infinite: true,
-        speed: 500,
-        slidesToShow: 1,
-        adaptiveHeight: true,
-        autoplay: true,
-        autoplaySpeed: 5000,
-    });
+    if ($('.testimonial-slider').length) {
+        $('.testimonial-slider').slick({
+            dots: true,
+            infinite: true,
+            speed: 500,
+            slidesToShow: 1,
+            adaptiveHeight: true,
+            autoplay: true,
+            autoplaySpeed: 5000,
+        });
+    }
 
     // Hide header on scroll down, show on scroll up
     let lastScroll = 0;
@@ -85,12 +87,14 @@ $(document).ready(function(){
     });
 
     // Initialize gallery slider
-    $('.gallery-grid').slick({
-        dots: true,
-        infinite: true,
-        speed: 600,
-        slidesToShow: 1,
-        arrows: true,
-        adaptiveHeight: true,
-    });
+    if ($('.gallery-grid').length) {
+        $('.gallery-grid').slick({
+            dots: true,
+            infinite: true,
+            speed: 600,
+            slidesToShow: 1,
+            arrows: true,
+            adaptiveHeight: true,
+        });
+    }
 });
