@@ -1,8 +1,4 @@
 // Simple front-end chatbot UI (replace with real API for production)
-var chatbotWidget = document.getElementById('chatbot-widget');
-const chatbotToggle = document.getElementById('chatbot-toggle');
-const chatbotWindow = document.getElementById('chatbot-window');
-const chatbotClose = document.getElementById('chatbot-close');
 const chatbotForm = document.getElementById('chatbot-form');
 const chatbotInput = document.getElementById('chatbot-input');
 const chatbotMessages = document.getElementById('chatbot-messages');
@@ -15,29 +11,17 @@ function appendMessage(sender, text) {
   chatbotMessages.scrollTop = chatbotMessages.scrollHeight;
 }
 
-if (chatbotToggle) {
-  chatbotToggle.onclick = () => {
-    chatbotWindow.style.display = 'block';
-    chatbotToggle.style.display = 'none';
-  };
-}
-if (chatbotClose) {
-  chatbotClose.onclick = () => {
-    chatbotWindow.style.display = 'none';
-    chatbotToggle.style.display = 'block';
-  };
-}
 if (chatbotForm) {
   chatbotForm.onsubmit = function(e) {
-  e.preventDefault();
-  const userMsg = chatbotInput.value.trim();
-  if (!userMsg) return;
-  appendMessage('user', userMsg);
-  chatbotInput.value = '';
-  // Simulate bot response (replace with real AI API call)
-  setTimeout(() => {
-    appendMessage('bot', getBotResponse(userMsg));
-  }, 800);
+    e.preventDefault();
+    const userMsg = chatbotInput.value.trim();
+    if (!userMsg) return;
+    appendMessage('user', userMsg);
+    chatbotInput.value = '';
+    // Simulate bot response (replace with real AI API call)
+    setTimeout(() => {
+      appendMessage('bot', getBotResponse(userMsg));
+    }, 800);
   };
 }
 
