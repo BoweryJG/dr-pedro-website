@@ -1,15 +1,15 @@
 /* General Styles */
 :root {
-    --primary: #1a2238; /* deep navy */
-    --primary-light: #28304a;
-    --accent: #d4af37; /* rich gold */
-    --cta: #d4af37; /* gold for CTAs */
-    --bg: #f8f6f1; /* soft white */
+    --primary: #3ed6c1; /* Fresh Aqua */
+    --primary-light: #e6f0fa; /* Soft Sky Blue */
+    --accent: #ffe9b0; /* Warm Sand */
+    --cta: #3ed6c1; /* Aqua for CTAs */
+    --bg: #ffffff; /* Crisp White */
     --card-bg: #fff;
-    --text: #1a2238;
-    --text-light: #4b5563; /* cool gray */
-    --border: #e5e7eb;
-    --shadow: 0 4px 32px 0 rgba(26,34,56,0.12);
+    --text: #23272b; /* Deep Charcoal */
+    --text-light: #5f6c7b; /* Cool Gray */
+    --border: #e6f0fa;
+    --shadow: 0 4px 32px 0 rgba(62,214,193,0.09);
     --radius: 18px;
     --transition: 0.18s cubic-bezier(.61,.01,.49,1.03);
     --heading-font: 'Poppins', sans-serif;
@@ -17,12 +17,12 @@
 }
 
 :root {
-    --primary-color: #1a2238; /* Deep Navy */
-    --secondary-color: #d4af37; /* Rich Gold */
-    --background-color: #f8f6f1; /* Soft White */
+    --primary-color: #3ed6c1; /* Fresh Aqua */
+    --secondary-color: #ffe9b0; /* Warm Sand */
+    --background-color: #ffffff; /* Crisp White */
     --card-background: #fff;
-    --text-color: #1a2238;
-    --text-secondary: #4b5563;
+    --text-color: #23272b; /* Deep Charcoal */
+    --text-secondary: #5f6c7b; /* Cool Gray */
 }
 
 body {
