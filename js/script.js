@@ -48,15 +48,14 @@ $(document).ready(function(){
     });
 
     // Testimonial Slider
-    if ($('.testimonial-slider').length) {
-        $('.testimonial-slider').slick({
+    var $slider = $('.testimonial-slider');
+    if ($slider.length && $slider.find('.testimonial').length > 0 && typeof $slider.slick === 'function') {
+        $slider.slick({
             dots: true,
-            infinite: true,
-            speed: 500,
-            slidesToShow: 1,
-            adaptiveHeight: true,
+            arrows: false,
             autoplay: true,
-            autoplaySpeed: 5000,
+            autoplaySpeed: 6000,
+            adaptiveHeight: true
         });
     }
 
