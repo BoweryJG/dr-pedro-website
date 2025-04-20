@@ -47,10 +47,6 @@ $(document).ready(function(){
         $('header nav').toggleClass('active');
     });
 
-            adaptiveHeight: true
-        });
-    }
-
     // Hide header on scroll down, show on scroll up
     let lastScroll = 0;
     ScrollTrigger.create({
