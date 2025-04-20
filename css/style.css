@@ -1603,8 +1603,18 @@ header nav ul li a:hover {
 }
 
 #about {
-    padding: 80px 0;
+    padding: 56px 0 44px 0;
     background-color: var(--accent-color);
+    position: relative;
+}
+
+.divider {
+    width: 100%;
+    height: 18px;
+    background: linear-gradient(90deg, #fffbe6 0%, #d4af37 50%, #fffbe6 100%);
+    opacity: 0.7;
+    margin: 0 auto;
+    border-radius: 10px;
 }
 
 #about .container {
@@ -1628,7 +1638,8 @@ header nav ul li a:hover {
 
 #services {
     background: #f8fafc;
-    padding: 36px 0 32px 0;
+    padding: 32px 0 28px 0;
+    position: relative;
 }
 
 #services .luxury-services-grid {
@@ -1682,7 +1693,8 @@ header nav ul li a:hover {
 
 #testimonials {
     background: #fff;
-    padding: 48px 0 36px 0;
+    padding: 44px 0 32px 0;
+    position: relative;
 }
 
 #testimonials .testimonial-slider {
@@ -1717,7 +1729,8 @@ header nav ul li a:hover {
 
 #gallery {
     background: #f8fafc;
-    padding: 80px 0;
+    padding: 48px 0 36px 0;
+    position: relative;
 }
 
 #gallery .gallery-grid {
@@ -1756,8 +1769,9 @@ header nav ul li a:hover {
 }
 
 #contact {
-    padding: 80px 0;
+    padding: 48px 0 36px 0;
     background-color: #f9f9f9;
+    position: relative;
 }
 
 #contact .container {
