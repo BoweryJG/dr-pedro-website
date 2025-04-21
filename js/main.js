@@ -21,7 +21,7 @@ function initSupabase() {
 }
 
 document.addEventListener('DOMContentLoaded', function () {
-  // Section fade-in on scroll
+  // Section fade-in on scroll (more subtle, luxurious)
   const sections = document.querySelectorAll('main section');
   const observer = new IntersectionObserver((entries, obs) => {
     entries.forEach(entry => {
@@ -30,18 +30,33 @@ document.addEventListener('DOMContentLoaded', function () {
         obs.unobserve(entry.target);
       }
     });
-  }, { threshold: 0.1 });
+  }, { threshold: 0.08 });
   sections.forEach(section => {
     section.classList.add('fade-section');
     observer.observe(section);
   });
 
-  // FAQ toggle
+  // FAQ toggle (animated, ARIA)
   document.querySelectorAll('.faq-question').forEach(q => {
+    q.setAttribute('tabindex', '0');
+    q.setAttribute('role', 'button');
+    q.setAttribute('aria-expanded', 'false');
     q.addEventListener('click', function () {
-      this.parentElement.classList.toggle('open');
+      const answer = this.nextElementSibling;
+      const expanded = this.getAttribute('aria-expanded') === 'true';
+      this.setAttribute('aria-expanded', !expanded);
+      answer.classList.toggle('faq-open');
+    });
+    q.addEventListener('keydown', function (e) {
+      if (e.key === 'Enter' || e.key === ' ') {
+        e.preventDefault();
+        this.click();
+      }
     });
   });
+
+  // Blog fetch from Supabase
+  blogList = document.getElementById('blog-list');
 
   // Contact form validation and feedback
   const form = document.getElementById('contactForm');
@@ -54,38 +69,67 @@ document.addEventListener('DOMContentLoaded', function () {
         if (!f.value.trim()) valid = false;
       });
       if (!valid) {
-        showFormMsg('Please fill in all fields.', false);
+        showFormToast('Please fill in all fields.', false);
         return;
       }
       // TODO: send to Supabase
-      showFormMsg('Thank you! We received your message.', true);
+      showFormToast('Thank you! We received your message.', true);
       form.reset();
     });
   }
 
-  function showFormMsg(msg, success) {
-    let el = document.getElementById('formMsg');
-    if (!el) {
-      el = document.createElement('div');
-      el.id = 'formMsg';
-      form.parentElement.insertBefore(el, form);
+  // Floating toast notification for form feedback
+  function showFormToast(msg, success) {
+    let toast = document.getElementById('formToast');
+    if (!toast) {
+      toast = document.createElement('div');
+      toast.id = 'formToast';
+      toast.setAttribute('role', 'alert');
+      toast.style.position = 'fixed';
+      toast.style.bottom = '32px';
+      toast.style.left = '50%';
+      toast.style.transform = 'translateX(-50%)';
+      toast.style.minWidth = '220px';
+      toast.style.padding = '18px 32px';
+      toast.style.borderRadius = '16px';
+      toast.style.fontSize = '1.1rem';
+      toast.style.fontWeight = '500';
+      toast.style.boxShadow = '0 6px 32px #33415522';
+      toast.style.zIndex = '99999';
+      toast.style.opacity = '0';
+      toast.style.transition = 'opacity 0.4s cubic-bezier(.4,0,.2,1)';
+      document.body.appendChild(toast);
     }
-    el.textContent = msg;
-    el.className = success ? 'form-success' : 'form-error';
-    setTimeout(() => { el.textContent = ''; }, 4000);
+    toast.textContent = msg;
+    toast.style.background = success ? 'var(--accent)' : 'var(--pop)';
+    toast.style.color = success ? 'var(--primary)' : '#fff';
+    toast.style.opacity = '1';
+    setTimeout(() => {
+      toast.style.opacity = '0';
+    }, 4000);
   }
 
   // Blog fetch from Supabase
-  const blogList = document.getElementById('blog-list');
+  blogList = document.getElementById('blog-list');
   function renderBlog(posts) {
     if (!blogList) return;
     if (!posts.length) {
       blogList.innerHTML = '<p>No blog posts yet.</p>';
       return;
     }
-    blogList.innerHTML = posts.map(post =>
-      `<article><h3>${post.title}</h3><p>${post.summary || ''}</p></article>`
-    ).join('');
+    blogList.innerHTML = '';
+    posts.forEach((post, i) => {
+      const article = document.createElement('article');
+      article.innerHTML = `<h3>${post.title}</h3><p>${post.summary || ''}</p>`;
+      article.style.opacity = '0';
+      article.style.transform = 'translateY(32px)';
+      article.style.transition = 'opacity 0.7s cubic-bezier(.4,0,.2,1), transform 0.7s cubic-bezier(.4,0,.2,1)';
+      blogList.appendChild(article);
+      setTimeout(() => {
+        article.style.opacity = '1';
+        article.style.transform = 'translateY(0)';
+      }, 100 + i * 120);
+    });
   }
   async function fetchBlog() {
     if (!supabase) return;
@@ -108,7 +152,7 @@ document.addEventListener('DOMContentLoaded', function () {
         if (!f.value.trim()) valid = false;
       });
       if (!valid) {
-        showFormMsg('Please fill in all fields.', false);
+        showFormToast('Please fill in all fields.', false);
         return;
       }
       // Save contact to Supabase
@@ -119,37 +163,36 @@ document.addEventListener('DOMContentLoaded', function () {
           message: form.message.value
         }]);
         if (error) {
-          showFormMsg('Error sending message. Please try again.', false);
+          showFormToast('Error sending message. Please try again.', false);
           return;
         }
-        showFormMsg('Thank you! We received your message.', true);
+        showFormToast('Thank you! We received your message.', true);
         form.reset();
       } else {
-        showFormMsg('Supabase not ready.', false);
+        showFormToast('Supabase not ready.', false);
       }
     });
   }
 
-  function showFormMsg(msg, success) {
-    let el = document.getElementById('formMsg');
-    if (!el) {
-      el = document.createElement('div');
-      el.id = 'formMsg';
-      form.parentElement.insertBefore(el, form);
-    }
-    el.textContent = msg;
-    el.className = success ? 'form-success' : 'form-error';
-    setTimeout(() => { el.textContent = ''; }, 4000);
-  }
-
-  // Dark mode toggle
+  // Dark mode toggle (premium icon, floating, tooltip)
   const darkBtn = document.createElement('button');
-  darkBtn.textContent = '🌙 Dark Mode';
+  darkBtn.innerHTML = '<span aria-label="Toggle dark mode" title="Toggle dark mode" style="font-size: 1.5rem;">🌙</span>';
   darkBtn.className = 'button secondary';
   darkBtn.style.position = 'fixed';
   darkBtn.style.bottom = '24px';
   darkBtn.style.right = '24px';
+  darkBtn.style.width = '48px';
+  darkBtn.style.height = '48px';
+  darkBtn.style.borderRadius = '50%';
+  darkBtn.style.display = 'flex';
+  darkBtn.style.alignItems = 'center';
+  darkBtn.style.justifyContent = 'center';
+  darkBtn.style.padding = '0';
+  darkBtn.style.fontSize = '1.5rem';
+  darkBtn.style.boxShadow = '0 4px 12px #33415522';
   darkBtn.style.zIndex = '9999';
+  darkBtn.setAttribute('aria-label', 'Toggle dark mode');
+  darkBtn.setAttribute('title', 'Toggle dark mode');
   document.body.appendChild(darkBtn);
   darkBtn.onclick = () => {
     document.body.classList.toggle('dark');
