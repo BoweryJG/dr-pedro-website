@@ -1,17 +1,17 @@
 /* Dr. Greg Pedro Modern Clean Site */
 :root {
-  --primary: #d6ccc2; /* pale taupe */
-  --accent: #ecece7;  /* very light gray */
-  --accent2: #f5ede3; /* light beige */
-  --background: #e7dbcf; /* light sand */
-  --surface: #d6b8a6; /* pale blush */
-  --text: #222; /* deep gray for contrast */
-  --pop-pink: #ff3ec9; /* neon pink */
-  --pop-lime: #c6ff00; /* neon lime */
+  --primary: #1e3a8a; /* deep royal blue */
+  --accent: #ffd700;  /* soft gold */
+  --accent2: #f8fafc; /* very light gray */
+  --background: #fff;  /* pure white */
+  --surface: #fff;     /* white for cards/sections */
+  --text: #18181b;     /* ultra-dark navy */
+  --pop: #ff477e;      /* vibrant coral */
   --radius: 22px;
-  --shadow: 0 4px 32px #0001;
+  --shadow: 0 4px 32px #1e3a8a22;
   --font: 'Inter', 'Poppins', Arial, sans-serif;
 }
+
 
 
 html, body {
@@ -69,10 +69,10 @@ nav a {
 }
 
 nav a.cta, nav a:hover {
-  background: linear-gradient(90deg, var(--pop-pink) 0%, var(--pop-lime) 100%);
+  background: linear-gradient(90deg, var(--pop), var(--primary));
   color: #fff;
-  box-shadow: 0 4px 24px #ff3ec955, var(--shadow);
-  text-shadow: 0 2px 8px #c6ff0033;
+  box-shadow: 0 4px 24px #1e3a8a22, var(--shadow);
+  text-shadow: 0 2px 8px #ffd70033;
 }
 
 
@@ -82,7 +82,7 @@ main {
   padding: 56px 32px 72px 32px;
   background: var(--surface);
   border-radius: var(--radius);
-  box-shadow: 0 8px 40px #ff3ec911, var(--shadow);
+  box-shadow: 0 8px 40px #1e3a8a11, var(--shadow);
 }
 
 
@@ -90,7 +90,7 @@ section {
   margin-bottom: 64px;
   background: var(--accent2);
   border-radius: var(--radius);
-  box-shadow: 0 6px 32px #ff3ec911, var(--shadow);
+  box-shadow: 0 6px 32px #ffd70011, var(--shadow);
   padding: 44px 32px;
   opacity: 1;
   transition: opacity 0.8s cubic-bezier(.4,0,.2,1), transform 0.8s cubic-bezier(.4,0,.2,1);
@@ -98,7 +98,7 @@ section {
 
 
 .button, button {
-  background: linear-gradient(90deg, var(--pop-pink) 0%, var(--pop-lime) 100%);
+  background: linear-gradient(90deg, var(--pop), var(--accent));
   color: #fff;
   border: none;
   border-radius: var(--radius);
@@ -108,7 +108,7 @@ section {
   font-weight: 700;
   margin: 20px 14px 0 0;
   cursor: pointer;
-  box-shadow: 0 6px 32px #ff3ec955, var(--shadow);
+  box-shadow: 0 6px 32px #ff477e33, var(--shadow);
   transition: background 0.2s, box-shadow 0.2s, transform 0.2s;
   text-decoration: none;
   display: inline-block;
@@ -116,13 +116,13 @@ section {
 }
 
 .button.secondary, button.secondary {
-  background: linear-gradient(90deg, var(--accent2) 0%, var(--pop-lime) 100%);
-  color: var(--text);
-  border: 2px solid var(--pop-lime);
+  background: var(--accent2);
+  color: var(--primary);
+  border: 2px solid var(--accent);
 }
 
 .button:focus, button:focus-visible {
-  outline: 2.5px solid var(--pop-pink);
+  outline: 2.5px solid var(--pop);
   outline-offset: 2px;
 }
 
