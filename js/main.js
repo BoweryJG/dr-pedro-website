@@ -11,12 +11,12 @@ function initSupabase() {
     script.src = 'https://cdn.jsdelivr.net/npm/@supabase/supabase-js';
     script.onload = () => {
       supabase = window.supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
-      afterSupabaseReady();
+      // afterSupabaseReady(); // Removed: function not defined
     };
     document.head.appendChild(script);
   } else {
     supabase = window.supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
-    afterSupabaseReady();
+    // afterSupabaseReady(); // Removed: function not defined
   }
 }
 
