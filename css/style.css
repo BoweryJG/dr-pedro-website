@@ -1,16 +1,17 @@
 /* Dr. Greg Pedro Modern Clean Site */
 :root {
-  --primary: #1e3a8a; /* deep royal blue */
-  --accent: #ffd700;  /* soft gold */
-  --accent2: #f8fafc; /* very light gray */
-  --background: #fff;  /* pure white */
-  --surface: #fff;     /* white for cards/sections */
-  --text: #18181b;     /* ultra-dark navy */
-  --pop: #ff477e;      /* vibrant coral */
+  --primary: #334155;   /* slate/charcoal gray */
+  --accent: #e7cba9;    /* soft champagne */
+  --accent2: #f8fafc;   /* off-white */
+  --background: #f8fafc;/* off-white background */
+  --surface: #fff;      /* white for cards/sections */
+  --text: #23272f;      /* deep graphite */
+  --pop: #6c8cbf;       /* muted French blue */
   --radius: 22px;
-  --shadow: 0 4px 32px #1e3a8a22;
+  --shadow: 0 4px 32px #33415512;
   --font: 'Inter', 'Poppins', Arial, sans-serif;
 }
+
 
 
 
@@ -69,50 +70,57 @@ nav a {
 }
 
 nav a.cta, nav a:hover {
-  background: linear-gradient(90deg, var(--pop), var(--primary));
+  background: var(--pop);
   color: #fff;
-  box-shadow: 0 4px 24px #1e3a8a22, var(--shadow);
-  text-shadow: 0 2px 8px #ffd70033;
+  box-shadow: 0 4px 24px #6c8cbf22, var(--shadow);
+  text-shadow: none;
 }
 
 
 main {
   max-width: 900px;
   margin: 0 auto;
-  padding: 56px 32px 72px 32px;
+  padding: 48px 24px 64px 24px;
   background: var(--surface);
   border-radius: var(--radius);
-  box-shadow: 0 8px 40px #1e3a8a11, var(--shadow);
+  box-shadow: var(--shadow);
 }
 
 
 section {
-  margin-bottom: 64px;
-  background: var(--accent2);
+  margin-bottom: 54px;
+  background: var(--surface);
   border-radius: var(--radius);
-  box-shadow: 0 6px 32px #ffd70011, var(--shadow);
-  padding: 44px 32px;
+  box-shadow: var(--shadow);
+  padding: 36px 24px;
   opacity: 1;
   transition: opacity 0.8s cubic-bezier(.4,0,.2,1), transform 0.8s cubic-bezier(.4,0,.2,1);
 }
 
 
 .button, button {
-  background: linear-gradient(90deg, var(--pop), var(--accent));
+  background: var(--primary);
   color: #fff;
   border: none;
   border-radius: var(--radius);
-  padding: 18px 44px;
-  font-size: 1.25rem;
+  padding: 16px 40px;
+  font-size: 1.15rem;
   font-family: var(--font);
-  font-weight: 700;
-  margin: 20px 14px 0 0;
+  font-weight: 600;
+  margin: 18px 12px 0 0;
   cursor: pointer;
-  box-shadow: 0 6px 32px #ff477e33, var(--shadow);
+  box-shadow: var(--shadow);
   transition: background 0.2s, box-shadow 0.2s, transform 0.2s;
   text-decoration: none;
   display: inline-block;
-  letter-spacing: 0.5px;
+  letter-spacing: 0.3px;
+}
+
+.button:hover, button:hover {
+  background: var(--pop);
+  color: #fff;
+  box-shadow: 0 6px 32px #6c8cbf33, var(--shadow);
+  transform: translateY(-2px) scale(1.03);
 }
 
 .button.secondary, button.secondary {
@@ -122,7 +130,7 @@ section {
 }
 
 .button:focus, button:focus-visible {
-  outline: 2.5px solid var(--pop);
+  outline: 2.5px solid var(--accent);
   outline-offset: 2px;
 }
 
