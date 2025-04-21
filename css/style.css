@@ -171,16 +171,34 @@ blockquote span {
   margin-top: 8px;
 }
 
-form input, form textarea {
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  max-width: 430px;
+  margin: 0 auto;
+  align-items: stretch;
+}
+
+.contact-form input,
+.contact-form textarea {
   width: 100%;
   padding: 20px 18px;
-  margin-bottom: 24px;
+  margin-bottom: 0;
   border: 2px solid #e3e8ef;
   border-radius: var(--radius);
   font-size: 1.1rem;
   background: var(--surface);
   color: var(--text);
   transition: border 0.2s, background 0.2s;
+}
+
+.contact-form button {
+  width: 100%;
+  margin: 0;
+  margin-top: 6px;
+  font-size: 1.15rem;
+  align-self: flex-end;
 }
 
 form input:focus, form textarea:focus {
@@ -218,11 +236,7 @@ form input:focus, form textarea:focus {
   font-size: 1rem;
   font-family: var(--font);
 }
-form button {
-  width: 100%;
-  font-size: 1.15rem;
-  margin: 0;
-}
+/* form button is now handled by .contact-form button above for specificity */
 /* FAQ accordion */
 .faq-item {
   border-bottom: 1px solid #eee;
