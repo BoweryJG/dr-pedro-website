@@ -1,7 +1,7 @@
 // crm.js for simple CRM with Supabase integration
 // TODO: Insert your Supabase URL and anon/public key below
-const SUPABASE_URL = 'YOUR_SUPABASE_URL';
-const SUPABASE_KEY = 'YOUR_SUPABASE_ANON_KEY';
+const SUPABASE_URL = 'https://ovrjzqvkeqjzqjzvjpqg.supabase.co';
+const SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im92cmp6cXZrZXFqenFqenZqcHFnIiwicm9sZSI6ImFub24iLCJpYXQiOjE2OTg2NTY3NTksImV4cCI6MjAxNDIzMjc1OX0.9q9v1h1bq6j5tq8iA7n8xXGQv7j5F9JZb4KkKkKkKkKk';
 
 let supabase = null;
 
