@@ -281,6 +281,70 @@ footer {
 }
 footer a { color: var(--gold); text-decoration: underline; }
 
+body.dark {
+  background: #101622;
+  color: #fff;
+}
+body.dark header, body.dark section, body.dark main, body.dark footer {
+  background: #181f2b !important;
+  color: #fff !important;
+  box-shadow: 0 6px 32px #0005;
+}
+body.dark nav, body.dark nav .brand {
+  background: #181f2b !important;
+  color: #fff !important;
+}
+body.dark nav a {
+  color: #fff;
+}
+body.dark nav a.cta, body.dark nav a:hover {
+  background: linear-gradient(90deg, var(--gold) 0%, #222 100%);
+  color: #fff;
+}
+body.dark .button, body.dark button {
+  background: linear-gradient(90deg, var(--gold) 0%, #222 100%);
+  color: #fff;
+  border: none;
+}
+body.dark .button:hover, body.dark button:hover {
+  background: linear-gradient(90deg, #222 0%, var(--gold) 100%);
+  color: var(--gold);
+}
+body.dark .button:active, body.dark button:active {
+  background: #222;
+  color: var(--gold);
+}
+body.dark .faq-item {
+  background: #21283a;
+  border-bottom: 1px solid #333;
+}
+body.dark .faq-answer {
+  color: #ccc;
+}
+body.dark .form-success {
+  background: #163a1d;
+  color: #b6f5c5;
+}
+body.dark .form-error {
+  background: #3a1616;
+  color: #ffbdbd;
+}
+body.dark input, body.dark textarea {
+  background: #222;
+  color: #fff;
+  border: 1.5px solid #444;
+}
+body.dark input:focus, body.dark textarea:focus {
+  border: 1.5px solid var(--gold);
+}
+body.dark footer {
+  background: #181f2b;
+  color: #fff;
+}
+body.dark footer a {
+  color: var(--gold);
+}
+
 @media (max-width: 700px) {
   nav {
     flex-direction: column;
