@@ -59,7 +59,7 @@ document.addEventListener('DOMContentLoaded', function () {
   blogList = document.getElementById('blog-list');
 
   // Contact form validation and feedback
-  const form = document.getElementById('contactForm');
+  let form = document.getElementById('contactForm');
   if (form) {
     form.addEventListener('submit', function (e) {
       e.preventDefault();
@@ -143,7 +143,6 @@ document.addEventListener('DOMContentLoaded', function () {
   }
 
   // Contact form validation and feedback (save to Supabase)
-  const form = document.getElementById('contactForm');
   if (form) {
     form.addEventListener('submit', async function (e) {
       e.preventDefault();
