@@ -21,32 +21,51 @@
     </nav>
   </header>
   <main>
-    <section id="hero">
-      <h1>Staten Island’s Premier Implant, TMJ & Emface Specialist</h1>
-      <p>Experience artistry and advanced technology with <b>Dr. Greg Pedro</b>. Trusted by patients, recognized by experts.</p>
-      <a href="#contact" class="button">Book a Free Consultation</a>
+    <section id="hero" class="hero-bg">
+      <div class="hero-overlay"></div>
+      <div class="hero-content">
+        <img src="img/dr-pedro-photo.jpg" alt="Dr. Greg Pedro" class="hero-photo" />
+        <h1>Staten Island’s Premier Implant, TMJ & Emface Specialist</h1>
+        <p>Experience artistry and advanced technology with <b>Dr. Greg Pedro</b>. Trusted by patients, recognized by experts.</p>
+        <a href="#contact" class="button">Book a Free Consultation</a>
+      </div>
     </section>
     <section id="about">
-      <h2>Meet Dr. Greg Pedro</h2>
-      <p>Staten Island’s most trusted name in advanced dental care. Dr. Pedro blends world-class expertise, artistry, and genuine compassion to deliver transformations that change lives—not just smiles.</p>
-      <ul>
-        <li>Board-certified, multi-award-winning specialist</li>
-        <li>Pioneering the latest in implant and facial aesthetics</li>
-        <li>Renowned for warmth, integrity, and patient trust</li>
-      </ul>
+      <div class="about-flex">
+        <img src="img/dr-pedro-headshot.jpg" alt="Dr. Pedro headshot" class="about-photo" />
+        <div>
+          <h2>Meet Dr. Greg Pedro</h2>
+          <ul class="about-credentials">
+            <li>Board-certified, multi-award-winning specialist</li>
+            <li>Pioneering the latest in implant and facial aesthetics</li>
+            <li>Renowned for warmth, integrity, and patient trust</li>
+            <li>Featured in NYC Top Doctors</li>
+          </ul>
+          <p>Staten Island’s most trusted name in advanced dental care. Dr. Pedro blends world-class expertise, artistry, and genuine compassion to deliver transformations that change lives—not just smiles.</p>
+        </div>
+      </div>
+    </section>
+    <section id="why">
+      <h2>Why Choose Dr. Pedro?</h2>
+      <div class="why-cards">
+        <div class="why-card"><span class="why-icon">★</span> Compassionate, patient-centered care</div>
+        <div class="why-card"><span class="why-icon">🏆</span> Award-winning expertise</div>
+        <div class="why-card"><span class="why-icon">🔬</span> Advanced technology</div>
+        <div class="why-card"><span class="why-icon">👍</span> Trusted by thousands</div>
+      </div>
     </section>
     <section id="services">
       <h2>Signature Services</h2>
-      <div>
-        <div>
+      <div class="service-cards">
+        <div class="service-card"><span class="service-icon">🦷</span>
           <h3>Dental Implants</h3>
           <p>Smile confidently again with NYC’s most advanced, natural-looking implants—crafted for beauty and durability.</p>
         </div>
-        <div>
+        <div class="service-card"><span class="service-icon">💤</span>
           <h3>TMJ Treatment</h3>
           <p>Relieve jaw pain and restore comfort with cutting-edge, compassionate TMJ care tailored to you.</p>
         </div>
-        <div>
+        <div class="service-card"><span class="service-icon">💆‍♀️</span>
           <h3>Emface by BTL</h3>
           <p>Lift, tone, and rejuvenate your look—no needles, no downtime. The future of facial aesthetics is here.</p>
         </div>
@@ -54,28 +73,43 @@
     </section>
     <section id="testimonials">
       <h2>What Our Patients Say</h2>
-      <blockquote>“Dr. Pedro’s implant artistry gave me my smile—and my confidence—back.”<br><span>- Maria L.</span></blockquote>
-      <blockquote>“I had terrible TMJ pain for years. Dr. Pedro's treatment has changed my life!”<br><span>- John B.</span></blockquote>
-      <blockquote>“The Emface treatments are incredible. I look years younger, naturally.”<br><span>- Sophia R.</span></blockquote>
+      <div class="testimonial-slider">
+        <div class="testimonial-card active"><blockquote>“Dr. Pedro’s implant artistry gave me my smile—and my confidence—back.”<br><span>- Maria L.</span></blockquote></div>
+        <div class="testimonial-card"><blockquote>“I had terrible TMJ pain for years. Dr. Pedro's treatment has changed my life!”<br><span>- John B.</span></blockquote></div>
+        <div class="testimonial-card"><blockquote>“The Emface treatments are incredible. I look years younger, naturally.”<br><span>- Sophia R.</span></blockquote></div>
+      </div>
+      <div class="testimonial-controls">
+        <button class="testimonial-prev" aria-label="Previous testimonial">&#8592;</button>
+        <button class="testimonial-next" aria-label="Next testimonial">&#8594;</button>
+      </div>
+    </section>
+    <section id="faq">
+      <h2>Frequently Asked Questions</h2>
+      <div class="faq-list">
+        <div class="faq-item"><div class="faq-question">How long do dental implants last?</div><div class="faq-answer">With proper care, dental implants can last a lifetime. Dr. Pedro uses only the highest-quality materials and techniques.</div></div>
+        <div class="faq-item"><div class="faq-question">Is TMJ treatment painful?</div><div class="faq-answer">Most patients experience relief quickly and find treatment comfortable. Dr. Pedro customizes every plan for comfort and results.</div></div>
+        <div class="faq-item"><div class="faq-question">What is Emface?</div><div class="faq-answer">Emface is a needle-free, non-surgical facial rejuvenation treatment that lifts and tones for a youthful look.</div></div>
+      </div>
+    </section>
+    <section id="contact">
+      <h2>Contact Us</h2>
+      <div class="contact-flex">
+        <form class="contact-form" id="contactForm" aria-label="Contact form">
+          <input type="text" name="name" placeholder="Your Name" required>
+          <input type="email" name="email" placeholder="Your Email" required>
+          <textarea name="message" placeholder="How can we help you?" required></textarea>
+          <button type="submit" class="button">Send Message</button>
+        </form>
+        <div class="contact-info">
+          <p><b>Call:</b> <a href="tel:555-555-5555">555-555-5555</a><br>
+          <b>Email:</b> <a href="mailto:info@drpedro.com">info@drpedro.com</a><br>
+          <b>Location:</b> Staten Island, NY</p>
+        </div>
+      </div>
     </section>
     <section id="blog">
       <h2>Insights & Blog</h2>
       <div id="blog-list"></div>
-    </section>
-    <section id="faq">
-      <h2>Frequently Asked Questions</h2>
-      <div class="faq-item"><div class="faq-question">How long do dental implants last?</div><div class="faq-answer">With proper care, dental implants can last a lifetime. Dr. Pedro uses only the highest-quality materials and techniques.</div></div>
-      <div class="faq-item"><div class="faq-question">Is TMJ treatment painful?</div><div class="faq-answer">Most patients experience relief quickly and find treatment comfortable. Dr. Pedro customizes every plan for comfort and results.</div></div>
-      <div class="faq-item"><div class="faq-question">What is Emface?</div><div class="faq-answer">Emface is a needle-free, non-surgical facial rejuvenation treatment that lifts and tones for a youthful look.</div></div>
-    </section>
-    <section id="contact">
-      <h2>Contact Us</h2>
-      <form class="contact-form" id="contactForm">
-        <input type="text" name="name" placeholder="Your Name" required>
-        <input type="email" name="email" placeholder="Your Email" required>
-        <textarea name="message" placeholder="How can we help you?" required></textarea>
-        <button type="submit" class="button">Send Message</button>
-      </form>
     </section>
   </main>
   <footer>

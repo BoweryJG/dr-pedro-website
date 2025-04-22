@@ -21,44 +21,130 @@ function initSupabase() {
 }
 
 document.addEventListener('DOMContentLoaded', function () {
-  // Section fade-in on scroll (more subtle, luxurious)
-  const sections = document.querySelectorAll('main section');
-  const observer = new IntersectionObserver((entries, obs) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('visible');
-        obs.unobserve(entry.target);
-      }
-    });
-  }, { threshold: 0.08 });
-  sections.forEach(section => {
-    section.classList.add('fade-section');
-    observer.observe(section);
-  });
+  // --- Testimonial Slider ---
+  function initTestimonialSlider() {
+    const cards = document.querySelectorAll('.testimonial-card');
+    const prevBtn = document.querySelector('.testimonial-prev');
+    const nextBtn = document.querySelector('.testimonial-next');
+    let idx = 0;
+    let interval;
 
-  // FAQ toggle (animated, ARIA)
-  document.querySelectorAll('.faq-question').forEach(q => {
-    q.setAttribute('tabindex', '0');
-    q.setAttribute('role', 'button');
-    q.setAttribute('aria-expanded', 'false');
-    q.addEventListener('click', function () {
-      const answer = this.nextElementSibling;
-      const expanded = this.getAttribute('aria-expanded') === 'true';
-      this.setAttribute('aria-expanded', !expanded);
-      answer.classList.toggle('faq-open');
+    function show(idxToShow) {
+      cards.forEach((card, i) => {
+        card.classList.toggle('active', i === idxToShow);
+      });
+    }
+    function next() {
+      idx = (idx + 1) % cards.length;
+      show(idx);
+    }
+    function prev() {
+      idx = (idx - 1 + cards.length) % cards.length;
+      show(idx);
+    }
+    function startAuto() {
+      interval = setInterval(next, 6000);
+    }
+    function stopAuto() {
+      clearInterval(interval);
+    }
+    if (nextBtn && prevBtn) {
+      nextBtn.addEventListener('click', () => { next(); stopAuto(); startAuto(); });
+      prevBtn.addEventListener('click', () => { prev(); stopAuto(); startAuto(); });
+    }
+    show(idx);
+    startAuto();
+  }
+
+  // --- FAQ Accordion (animated, ARIA) ---
+  function initFAQAccordion() {
+    document.querySelectorAll('.faq-question').forEach(q => {
+      q.setAttribute('tabindex', '0');
+      q.setAttribute('role', 'button');
+      q.setAttribute('aria-expanded', 'false');
+      q.addEventListener('click', function () {
+        const item = this.closest('.faq-item');
+        const expanded = item.classList.toggle('open');
+        this.setAttribute('aria-expanded', expanded);
+      });
+      q.addEventListener('keydown', function (e) {
+        if (e.key === 'Enter' || e.key === ' ') {
+          e.preventDefault();
+          this.click();
+        }
+      });
     });
-    q.addEventListener('keydown', function (e) {
-      if (e.key === 'Enter' || e.key === ' ') {
+  }
+
+  // --- Smooth Scroll for Anchors ---
+  function initSmoothScroll() {
+    document.querySelectorAll('a[href^="#"]').forEach(link => {
+      link.addEventListener('click', function (e) {
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+          e.preventDefault();
+          target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+      });
+    });
+  }
+
+  // --- Section Fade-In on Scroll (luxurious) ---
+  function initSectionFadeIn() {
+    const sections = document.querySelectorAll('main section, .hero-bg');
+    const observer = new IntersectionObserver((entries, obs) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          obs.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.08 });
+    sections.forEach(section => {
+      section.classList.add('fade-section');
+      observer.observe(section);
+    });
+  }
+
+  // --- Contact Form Validation ---
+  function initContactForm() {
+    let form = document.getElementById('contactForm');
+    if (form) {
+      form.addEventListener('submit', function (e) {
         e.preventDefault();
-        this.click();
-      }
-    });
-  });
+        let valid = true;
+        form.querySelectorAll('input, textarea').forEach(f => {
+          if (!f.value.trim()) valid = false;
+        });
+        if (!valid) {
+          showFormToast('Please fill in all fields.', false);
+          return;
+        }
+        showFormToast('Thank you! We received your message.', true);
+        form.reset();
+      });
+    }
+  }
+
+  // --- Toast Notification for Form Feedback ---
+  function showFormToast(msg, success) {
+    let toast = document.createElement('div');
+    toast.className = success ? 'form-success' : 'form-error';
+    toast.textContent = msg;
+    document.getElementById('contactForm').prepend(toast);
+    setTimeout(() => toast.remove(), 3000);
+  }
+
+  initSectionFadeIn();
+  initFAQAccordion();
+  initTestimonialSlider();
+  initSmoothScroll();
+  initContactForm();
 
   // Blog fetch from Supabase
   blogList = document.getElementById('blog-list');
 
-  // Contact form validation and feedback
+  // Contact form validation and feedback (legacy, safe to keep for now)
   let form = document.getElementById('contactForm');
   if (form) {
     form.addEventListener('submit', function (e) {
