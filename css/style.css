@@ -205,9 +205,27 @@ section {
 .wave-divider {
   display: block;
   width: 100%;
-  height: 64px;
-  margin: -28px 0 0 0;
+  height: 90px;
+  margin: -36px 0 0 0;
+  position: relative;
+  z-index: 1;
   background: none;
+}
+.wave-divider svg {
+  width: 100%;
+  height: 90px;
+  display: block;
+  animation: waveFloat 6s ease-in-out infinite alternate;
+}
+@keyframes waveFloat {
+  0% { transform: translateY(0); }
+  100% { transform: translateY(-12px); }
+}
+@media (max-width: 700px) {
+  .wave-divider, .wave-divider svg {
+    height: 44px;
+    min-height: 28px;
+  }
 }
 
 
