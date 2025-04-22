@@ -88,14 +88,29 @@ main {
 
 section {
   margin-bottom: 54px;
-  background: var(--surface);
+  background: #fff;
   border-radius: var(--radius);
-  box-shadow: var(--shadow);
+  box-shadow: 0 2px 12px #33415513;
   padding: 36px 24px;
   opacity: 1;
   transition: opacity 0.8s cubic-bezier(.4,0,.2,1), transform 0.8s cubic-bezier(.4,0,.2,1);
+  border: 1.5px solid #e5e7eb;
 }
 
+
+.why-card {
+  background: #fff;
+  border-radius: var(--radius);
+  box-shadow: 0 2px 12px #33415513;
+  padding: 26px 32px;
+  font-size: 1.13rem;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  min-width: 180px;
+  font-weight: 600;
+  border: 1.5px solid #e5e7eb;
+}
 
 .button, button {
   background: var(--primary);
