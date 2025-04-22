@@ -372,23 +372,93 @@ form input:focus, form textarea:focus {
   top: 0; left: 0; width: 100%; height: 100%;
   pointer-events: none;
   z-index: 0;
+  overflow: visible;
 }
 .blob {
   position: absolute;
-  border-radius: 50%;
-  filter: blur(36px);
-  opacity: 0.5;
-  animation: blobMove 12s ease-in-out infinite alternate;
+  border-radius: 24% 76% 67% 33% / 41% 34% 66% 59%; /* More geometric */
+  filter: blur(16px);
+  opacity: 0.38;
+  animation: blobMove 16s infinite linear alternate;
 }
-.blob1 { width: 320px; height: 220px; background: radial-gradient(circle at 40% 60%, #6c8cbf 60%, transparent 100%); left: -80px; top: 10%; animation-delay: 0s; }
-.blob2 { width: 260px; height: 180px; background: radial-gradient(circle at 60% 40%, #e7cba9 70%, transparent 100%); right: -60px; top: 30%; animation-delay: 2s; }
-.blob3 { width: 180px; height: 140px; background: radial-gradient(circle at 60% 60%, #b0a8e3 80%, transparent 100%); left: 50%; top: 65%; animation-delay: 4s; }
+.blob1 {
+  width: 340px; height: 340px;
+  background: linear-gradient(135deg, #1a2634 0%, #4b6584 100%);
+  left: -80px; top: 0;
+  animation-delay: 0s;
+}
+.blob2 {
+  width: 220px; height: 220px;
+  background: linear-gradient(135deg, #4b6584 0%, #bfa76c 100%);
+  right: -60px; top: 48px;
+  animation-delay: 4s;
+}
+.blob3 {
+  width: 180px; height: 180px;
+  background: linear-gradient(135deg, #2a343b 0%, #6c8cbf 100%);
+  left: 50%; top: 180px;
+  transform: translateX(-50%);
+  animation-delay: 8s;
+}
+
 @keyframes blobMove {
   0% { transform: scale(1) translateY(0); }
   50% { transform: scale(1.15) translateY(-18px); }
   100% { transform: scale(1.05) translateY(12px); }
 }
-.hero-bg, #why { position: relative; overflow: hidden; }
+
+/* Section underline (masculine, geometric) */
+.section-underline svg path {
+  stroke: #1a2634;
+  stroke-width: 6;
+  stroke-linecap: square;
+  fill: none;
+}
+
+/* Sparkle overlay (subtle metallic) */
+.sparkle-overlay {
+  background: repeating-radial-gradient(circle at 20% 30%, #bfa76c44 0, #bfa76c00 40px),
+              repeating-radial-gradient(circle at 80% 60%, #4b658444 0, #4b658400 32px);
+  opacity: 0.22;
+}
+
+h2, h3, .section-title {
+  font-family: 'Montserrat', 'Segoe UI', Arial, sans-serif;
+  font-weight: 800;
+  letter-spacing: 0.01em;
+  color: #1a2634;
+}
+
+.hero-bg, #why, #about, #services, #testimonials, #faq, #contact {
+  position: relative;
+  overflow: hidden;
+}
+
+.parallax-bg {
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+  will-change: background-position;
+}
+
+.section-reveal {
+  opacity: 0;
+  transform: translateY(48px) scale(0.97);
+  transition: opacity 0.7s cubic-bezier(.4,0,.2,1), transform 0.7s cubic-bezier(.4,0,.2,1);
+}
+.section-reveal.visible {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+}
+
+/* Blobs and sparkles for more sections */
+#about .blobs-bg, #services .blobs-bg, #testimonials .blobs-bg, #faq .blobs-bg, #contact .blobs-bg {
+  display: block;
+}
+#about .sparkle-overlay, #services .sparkle-overlay, #testimonials .sparkle-overlay, #faq .sparkle-overlay, #contact .sparkle-overlay {
+  display: block;
+}
+
 
 /* Sparkle Overlay */
 .sparkle-overlay {
