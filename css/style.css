@@ -366,7 +366,73 @@ form input:focus, form textarea:focus {
 
 /* Removed orphaned properties above: these were not inside a selector */
 
-/* form button is now handled by .contact-form button above for specificity */
+/* Animated Color Blobs */
+.blobs-bg {
+  position: absolute;
+  top: 0; left: 0; width: 100%; height: 100%;
+  pointer-events: none;
+  z-index: 0;
+}
+.blob {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(36px);
+  opacity: 0.5;
+  animation: blobMove 12s ease-in-out infinite alternate;
+}
+.blob1 { width: 320px; height: 220px; background: radial-gradient(circle at 40% 60%, #6c8cbf 60%, transparent 100%); left: -80px; top: 10%; animation-delay: 0s; }
+.blob2 { width: 260px; height: 180px; background: radial-gradient(circle at 60% 40%, #e7cba9 70%, transparent 100%); right: -60px; top: 30%; animation-delay: 2s; }
+.blob3 { width: 180px; height: 140px; background: radial-gradient(circle at 60% 60%, #b0a8e3 80%, transparent 100%); left: 50%; top: 65%; animation-delay: 4s; }
+@keyframes blobMove {
+  0% { transform: scale(1) translateY(0); }
+  50% { transform: scale(1.15) translateY(-18px); }
+  100% { transform: scale(1.05) translateY(12px); }
+}
+.hero-bg, #why { position: relative; overflow: hidden; }
+
+/* Sparkle Overlay */
+.sparkle-overlay {
+  position: absolute;
+  top: 0; left: 0; width: 100%; height: 100%;
+  pointer-events: none;
+  z-index: 2;
+  background-image: repeating-radial-gradient(circle at 20% 30%, #fff8 0, #fff0 2px, #fff0 20px), repeating-radial-gradient(circle at 70% 60%, #fff5 0, #fff0 1.5px, #fff0 18px);
+  animation: sparkleAnim 3.5s linear infinite;
+  opacity: 0.7;
+}
+@keyframes sparkleAnim {
+  0% { background-position: 0 0, 0 0; }
+  100% { background-position: 60px 40px, -40px -60px; }
+}
+
+/* Section Title Underline */
+.section-underline {
+  display: inline-block;
+  vertical-align: middle;
+  width: 72px;
+  height: 18px;
+  margin-left: 10px;
+  background: url('data:image/svg+xml;utf8,<svg width="72" height="18" xmlns="http://www.w3.org/2000/svg"><path d="M4 14 Q 36 2 68 14" stroke="%236c8cbf" stroke-width="4" fill="none" stroke-linecap="round"/></svg>') no-repeat center/contain;
+  opacity: 0.8;
+}
+
+/* Card Icon Animation */
+.why-icon, .service-icon {
+  transition: transform 0.4s cubic-bezier(.4,0,.2,1), filter 0.4s;
+}
+.why-card:hover .why-icon, .service-card:hover .service-icon {
+  transform: scale(1.18) rotate(-8deg);
+  filter: drop-shadow(0 0 16px #e7cba9cc);
+}
+
+/* Card Glow on Hover */
+.why-card:hover, .service-card:hover, .testimonial-card.active {
+  box-shadow: 0 0 0 4px #e7cba955, 0 16px 40px #6c8cbf44, 0 4px 18px #33415519;
+}
+
+/* Ensure blobs and sparkles are behind content */
+.hero-content, .why-cards { position: relative; z-index: 3; }
+
 /* FAQ accordion */
 .faq-item {
   border-bottom: 1px solid #eee;
