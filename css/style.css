@@ -99,18 +99,117 @@ section {
 
 
 .why-card {
-  background: #fff;
-  border-radius: var(--radius);
-  box-shadow: 0 2px 12px #33415513;
-  padding: 26px 32px;
+  background: rgba(255,255,255,0.65);
+  backdrop-filter: blur(12px) saturate(120%);
+  border-radius: 36px;
+  box-shadow: 0 8px 32px #6c8cbf33, 0 2px 12px #33415513;
+  padding: 36px 38px;
   font-size: 1.13rem;
   display: flex;
   align-items: center;
-  gap: 12px;
-  min-width: 180px;
+  gap: 18px;
+  min-width: 200px;
   font-weight: 600;
-  border: 1.5px solid #e5e7eb;
+  border: none;
+  position: relative;
+  transition: transform 0.18s, box-shadow 0.18s, background 0.3s;
+  overflow: hidden;
 }
+.why-card:hover {
+  transform: translateY(-6px) scale(1.03);
+  box-shadow: 0 16px 40px #6c8cbf44, 0 4px 18px #33415519;
+  background: rgba(255,255,255,0.85);
+}
+.card-icon-bg {
+  background: linear-gradient(135deg, var(--pop) 60%, #e7cba9 100%);
+  border-radius: 50%;
+  width: 54px;
+  height: 54px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 14px;
+  box-shadow: 0 2px 10px #6c8cbf22;
+  position: relative;
+  z-index: 2;
+}
+.why-icon {
+  font-size: 2em;
+  color: #fff;
+  filter: drop-shadow(0 2px 8px #6c8cbf33);
+}
+
+.service-card {
+  background: rgba(255,255,255,0.65);
+  backdrop-filter: blur(12px) saturate(120%);
+  border-radius: 36px;
+  box-shadow: 0 8px 32px #6c8cbf33, 0 2px 12px #33415513;
+  padding: 38px 32px 40px 32px;
+  flex: 1 1 260px;
+  min-width: 220px;
+  max-width: 340px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  transition: transform 0.18s, box-shadow 0.18s, background 0.3s;
+  overflow: hidden;
+  border: none;
+  margin-bottom: 18px;
+}
+.service-card:hover {
+  transform: translateY(-8px) scale(1.04);
+  box-shadow: 0 16px 40px #6c8cbf44, 0 4px 18px #33415519;
+  background: rgba(255,255,255,0.85);
+}
+.service-icon {
+  font-size: 2.4em;
+  color: #fff;
+  background: linear-gradient(135deg, var(--pop) 60%, #e7cba9 100%);
+  border-radius: 50%;
+  width: 56px;
+  height: 56px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 14px;
+  box-shadow: 0 2px 10px #6c8cbf22;
+}
+
+.testimonial-card {
+  background: rgba(255,255,255,0.65);
+  backdrop-filter: blur(10px) saturate(120%);
+  border-radius: 36px;
+  box-shadow: 0 8px 32px #6c8cbf33, 0 2px 12px #33415513;
+  padding: 36px 34px 32px 34px;
+  margin: 0 12px;
+  transition: box-shadow 0.18s, background 0.3s, transform 0.18s;
+  border: none;
+  opacity: 0;
+  transform: scale(0.98) translateX(40px);
+  position: absolute;
+  left: 0; right: 0;
+  width: 100%;
+  z-index: 1;
+  pointer-events: none;
+}
+.testimonial-card.active {
+  opacity: 1;
+  transform: scale(1) translateX(0);
+  z-index: 2;
+  pointer-events: auto;
+  box-shadow: 0 16px 40px #6c8cbf44, 0 4px 18px #33415519;
+  background: rgba(255,255,255,0.9);
+}
+
+.wave-divider {
+  display: block;
+  width: 100%;
+  height: 64px;
+  margin: -28px 0 0 0;
+  background: none;
+}
+
 
 .button, button {
   background: var(--primary);
@@ -246,14 +345,9 @@ form input:focus, form textarea:focus {
   font-weight: 600;
   font-size: 1.07rem;
 }
-  width: 100%;
-  margin-bottom: 14px;
-  padding: 12px;
-  border-radius: 8px;
-  border: 1.5px solid #e5e5e5;
-  font-size: 1rem;
-  font-family: var(--font);
-}
+
+/* Removed orphaned properties above: these were not inside a selector */
+
 /* form button is now handled by .contact-form button above for specificity */
 /* FAQ accordion */
 .faq-item {
