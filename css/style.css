@@ -366,40 +366,59 @@ form input:focus, form textarea:focus {
 
 /* Removed orphaned properties above: these were not inside a selector */
 
-/* Animated Color Blobs */
+/* Color palette */
+:root {
+  --color-orange: #fa8964;
+  --color-yellow: #ece48b;
+  --color-green: #89cd87;
+  --color-teal: #48dfdf;
+  --color-cyan: #54ffff;
+}
+
+/* Colorful blobs */
 .blobs-bg {
   position: absolute;
   top: 0; left: 0; width: 100%; height: 100%;
+  z-index: 1;
   pointer-events: none;
-  z-index: 0;
   overflow: visible;
 }
 .blob {
   position: absolute;
-  border-radius: 24% 76% 67% 33% / 41% 34% 66% 59%; /* More geometric */
+  border-radius: 24% 76% 67% 33% / 41% 34% 66% 59%;
   filter: blur(16px);
   opacity: 0.38;
   animation: blobMove 16s infinite linear alternate;
 }
-.blob1 {
-  width: 340px; height: 340px;
-  background: linear-gradient(135deg, #1a2634 0%, #4b6584 100%);
-  left: -80px; top: 0;
-  animation-delay: 0s;
-}
-.blob2 {
-  width: 220px; height: 220px;
-  background: linear-gradient(135deg, #4b6584 0%, #bfa76c 100%);
-  right: -60px; top: 48px;
-  animation-delay: 4s;
-}
-.blob3 {
-  width: 180px; height: 180px;
-  background: linear-gradient(135deg, #2a343b 0%, #6c8cbf 100%);
-  left: 50%; top: 180px;
-  transform: translateX(-50%);
-  animation-delay: 8s;
-}
+/* Hero section blobs */
+.hero-bg .blob1 { width: 340px; height: 340px; background: linear-gradient(135deg, var(--color-orange), var(--color-yellow)); left: -80px; top: 0; animation-delay: 0s; }
+.hero-bg .blob2 { width: 220px; height: 220px; background: linear-gradient(135deg, var(--color-yellow), var(--color-green)); right: -60px; top: 48px; animation-delay: 4s; }
+.hero-bg .blob3 { width: 180px; height: 180px; background: linear-gradient(135deg, var(--color-teal), var(--color-cyan)); left: 50%; top: 180px; transform: translateX(-50%); animation-delay: 8s; }
+/* About section blobs */
+#about .blob1 { width: 320px; height: 220px; background: linear-gradient(135deg, var(--color-green), var(--color-teal)); left: -70px; top: 10%; animation-delay: 2s; }
+#about .blob2 { width: 180px; height: 180px; background: linear-gradient(135deg, var(--color-cyan), var(--color-yellow)); right: 0; top: 60px; animation-delay: 5s; }
+#about .blob3 { width: 140px; height: 140px; background: linear-gradient(135deg, var(--color-orange), var(--color-teal)); left: 55%; top: 140px; animation-delay: 8s; }
+/* Why section blobs */
+#why .blob1 { width: 300px; height: 200px; background: linear-gradient(135deg, var(--color-yellow), var(--color-green)); left: -60px; top: 0; animation-delay: 1s; }
+#why .blob2 { width: 200px; height: 160px; background: linear-gradient(135deg, var(--color-orange), var(--color-cyan)); right: 0; top: 90px; animation-delay: 6s; }
+#why .blob3 { width: 120px; height: 120px; background: linear-gradient(135deg, var(--color-teal), var(--color-yellow)); left: 60%; top: 120px; animation-delay: 10s; }
+/* Services section blobs */
+#services .blob1 { width: 260px; height: 180px; background: linear-gradient(135deg, var(--color-teal), var(--color-cyan)); left: -50px; top: 0; animation-delay: 3s; }
+#services .blob2 { width: 160px; height: 160px; background: linear-gradient(135deg, var(--color-green), var(--color-orange)); right: 0; top: 120px; animation-delay: 7s; }
+#services .blob3 { width: 100px; height: 100px; background: linear-gradient(135deg, var(--color-yellow), var(--color-cyan)); left: 70%; top: 100px; animation-delay: 12s; }
+/* Testimonials section blobs */
+#testimonials .blob1 { width: 220px; height: 140px; background: linear-gradient(135deg, var(--color-cyan), var(--color-orange)); left: -40px; top: 10px; animation-delay: 4s; }
+#testimonials .blob2 { width: 120px; height: 120px; background: linear-gradient(135deg, var(--color-yellow), var(--color-teal)); right: 0; top: 80px; animation-delay: 8s; }
+#testimonials .blob3 { width: 80px; height: 80px; background: linear-gradient(135deg, var(--color-green), var(--color-orange)); left: 65%; top: 90px; animation-delay: 14s; }
+/* FAQ section blobs */
+#faq .blob1 { width: 180px; height: 120px; background: linear-gradient(135deg, var(--color-orange), var(--color-yellow)); left: -30px; top: 0; animation-delay: 5s; }
+#faq .blob2 { width: 100px; height: 100px; background: linear-gradient(135deg, var(--color-green), var(--color-cyan)); right: 0; top: 70px; animation-delay: 9s; }
+#faq .blob3 { width: 60px; height: 60px; background: linear-gradient(135deg, var(--color-teal), var(--color-yellow)); left: 75%; top: 80px; animation-delay: 16s; }
+/* Contact section blobs */
+#contact .blob1 { width: 120px; height: 80px; background: linear-gradient(135deg, var(--color-cyan), var(--color-orange)); left: -20px; top: 10px; animation-delay: 6s; }
+#contact .blob2 { width: 80px; height: 80px; background: linear-gradient(135deg, var(--color-yellow), var(--color-green)); right: 0; top: 60px; animation-delay: 11s; }
+#contact .blob3 { width: 50px; height: 50px; background: linear-gradient(135deg, var(--color-orange), var(--color-teal)); left: 80%; top: 60px; animation-delay: 18s; }
+
 
 @keyframes blobMove {
   0% { transform: scale(1) translateY(0); }
